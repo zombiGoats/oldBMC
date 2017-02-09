@@ -1,0 +1,11 @@
+//import normalize and milligram framework
+@import '../../node_modules/normalize.css/normalize';
+@import '../../node_modules/milligram/dist/milligram.min';
+
+//Import SCSS files
+@import 'base/all';
+@import 'utils/all';
+@import 'layout/all';
+@import 'components/all';
+@import 'vendor/all';
+
