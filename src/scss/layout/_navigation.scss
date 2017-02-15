@@ -8,18 +8,19 @@
   bottom: 0;
   z-index: 99;
   list-style-type: none;
-  margin:0;
-
+  margin: 0;
+  li { margin: 0; }
   .button, button, a {
     background: transparent;
-    height:auto;
+    height: auto;
     border: 0;
     color: $white;
     fill: $white;
-    width:100%;
-    padding: .6em 1em;
+    width: 100%;
+    padding: 1em;
     display: block;
     text-align: center;
+    margin-bottom: 0;
     .nav__icon {
       color: $white;
       max-height: 40px;
@@ -31,36 +32,53 @@
     }
     p {
       margin: 0;
-      line-height:0;
+      line-height: 0;
       font-size: .9em;
     }
 
-    .nav__icon-help__outer{fill:transparent; stroke:$white;stroke-miterlimit:10;stroke-width:1px;}
-    .nav__icon-help__Inner{fill:$white;}
+    .nav__icon-help__outer {
+      fill: transparent;
+      stroke: $white;
+      stroke-miterlimit: 10;
+      stroke-width: 1px;
+    }
+    .nav__icon-help__Inner {
+      fill: $white;
+    }
     &:hover {
       background: $white;
       fill: $black;
       color: $black;
-      padding: .6em 1em;
+      padding: 1em;
       border-radius: 0;
-      .nav__icon-help__outer { stroke: $black;}
-      .nav__icon-help__inner { fill: $black;}
+      .nav__icon-help__outer {
+        stroke: $black;
+      }
+      .nav__icon-help__inner {
+        fill: $black;
+      }
     }
+  }
+  .opened {
+    background: $white;
+    fill: $black;
+    color: $black;
   }
 }
 
 .nav__second-level {
   position: fixed;
   top: 0;
-  bottom:0;
-  left: 0px;
+  bottom: 0;
+  left: 0;
   z-index: 97;
   display: block;
-  background: red;
-  padding:10px .6em;
-  margin:0;
+  background: $white;
+  padding: 10px .6em;
+  margin: 0;
   list-style-type: none;
   transition: all ease-out 0.5s;
+  box-shadow: 0 2px 5px 0 $black;
   &.opened {
     transition: all ease-out .8s;
 
