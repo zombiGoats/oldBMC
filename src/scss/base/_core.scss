@@ -14,17 +14,19 @@ p {
 }
 
 button, .button, input[type="submit"] {
+  color: $white;
   background: $lightbg__primary;
-  border: 1px solid $lightbg__grey;
+  border: 0;
   font-weight: normal;
   font-size: 1em;
   text-transform: none;
   border-radius: 0;
-  padding: 0 2rem;
+  padding: .5rem 2rem;
   height: auto;
   line-height: 2.5em;
   &:hover {
     background: $lightbg__accent;
+    cursor: pointer;
   }
 }
 

@@ -7,9 +7,22 @@
   color: $lightbg__grey;
 }
 
+.float-right {
+  float: right;
+}
+.clear-float {
+  clear: both;
+}
 .error {
   color: $error;
-  font-size: .9em;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }
 
 .close {
@@ -28,4 +41,16 @@
     color: $lightbg__accent;
     background: transparent;
   }
+}
+
+.no-margin {
+  margin: 0px !important;
+}
+
+.no-bottom-margin {
+  margin-bottom: 0px !important;
+}
+
+.no-top-margin {
+  margin-top: 0px !important;
 }

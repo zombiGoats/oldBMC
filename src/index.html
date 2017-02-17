@@ -7,18 +7,40 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="js/vendor/vendor.min.js"></script>
 </head>
-
-    <div class="login__wrapper">
-        <h1>openBMC GUI</h1>
-        <form id="login__form">
-            <h2>Server name</h2>
-            <h3>Server IP</h3>
-            <input type="text" name="name" required placeholder="User Name">
-            <input type="password" name="password" required placeholder="Password">
-            <input type="submit" value="Login" class="float-right">
-        </form>
+<body>
+<div class="login__wrapper">
+    <div class="row">
+        <div class="columns large-6">
+            <img src="img/logo.svg" class="login__logo" alt="IBM"/>
+        </div>
+        <div class="columns large-6">
+            <p class="login__error-msg show">Invalid login attempt</p>
+        </div>
     </div>
+    <div class="row">
+        <div class="columns large-6 login__desc">
+            <p>Login to</p>
+            <h1>BMC Advanced System Management</h1>
+            <p>Build Version: 1.00.102</p>
+            <div class="login__server-info">
+                <p>Power SL-22LC</p>
+                <p>Server ID: 29000000166668</p>
+                <p>Server status: <span class="login__status ">Operational</span></p>
+            </div>
+        </div>
+        <div class="columns large-6">
+            <form id="login__form">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
 
-</body>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <input type="submit" value="Login" class="float-right no-margin">
+            </form>
+        </div>
+    </div>
+</div>
 <script src="js/app.min.js"></script>
+</body>
 </html>

@@ -1,4 +1,8 @@
 
+$lightbg__grey: #b8c1c1;
+$lightbg__accent: #3c6df0;
+$lightbg__primary: #19273c;
+
 //Breakpoints mixin
 @mixin mediaQuery($breakpoint) {
   @if $breakpoint == "x-small" {
@@ -48,13 +52,15 @@
 
 //Custom SVG arrow
 @mixin bgImage__arrowDown-primary {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 29 14" width="29"><path fill="#19273c" d="M9.37727 3.625l5.08154 6.93523L19.54036 3.625"/></svg>');
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: #19273c'></polygon></svg>");
 }
 
 @mixin bgImage__arrowDown-accent {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 29 14" width="29"><path fill="#3c6df0" d="M9.37727 3.625l5.08154 6.93523L19.54036 3.625"/></svg>');
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: #3c6df0'></polygon></svg>");
 }
 
 @mixin bgImage__arrowDown-grey {
-  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 29 14" width="29"><path fill="#19273c" d="M9.37727 3.625l5.08154 6.93523L19.54036 3.625"/></svg>');
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: #b8c1c1'></polygon></svg>");
 }
+
+
