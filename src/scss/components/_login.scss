@@ -51,6 +51,10 @@
   p {margin-bottom: 0;}
 }
 
+.login__status {
+  color: $status-ok;
+}
+
 .login__error-msg {
   background: $alert__error;
   padding: 1em;
