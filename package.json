@@ -11,7 +11,7 @@
     "serve": "browser-sync start --server 'dist' --files 'dist/css/*.css, dist/js/*.js, dist/*.html'",
     "build:css": "npm run scss && npm run autoprefixer",
     "build:js": "npm run uglify",
-    "build:html": "html-minifier --input-dir ./src/ --output-dir ./dist --collapse-whitespace --file-ext html ",
+    "build:html": "html-minifier --input-dir ./src/ --output-dir ./dist --collapse-whitespace --remove-comments --file-ext html ",
     "build:images": "npm run imagemin ",
     "build:all": "npm run prebuild && npm run build:css && npm run build:js && npm run build:html && npm run build:images",
     "watch:css": "onchange 'src/scss/' -- npm run build:css",
@@ -37,7 +37,6 @@
     "web-terminal": "^0.7.0"
   },
   "dependencies": {
-    "imagemin": "^5.2.2",
-    "mustache": "^2.3.0"
+    "imagemin": "^5.2.2"
   }
 }
