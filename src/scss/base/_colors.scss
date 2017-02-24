@@ -9,7 +9,7 @@ $field__disabled: #F4F8F8;
 // Dark background
 $darkbg__grey: #E3ECEC;
 $darkbg__accent: #79a6f6;
-$darkbg__primary: #1d3458;
+$darkbg__primary: #19273c;
 $active: #648FFF;
 
 // Light Background
@@ -17,7 +17,11 @@ $lightbg__grey: #b8c1c1;
 $lightbg__accent: #ebf0fc;
 $lightbg__primary: #1a273b;
 
-// Button colors
+// Primary Button colors
+$primebtn__bg: #3c6df0;
+$primebtn__text: $white;
+
+// Secondary Button colors
 $secbtn__bg: #ebf0fc;
 $secbtn__border: #3f71ec;
 $secbtn__text: #3f71ec;

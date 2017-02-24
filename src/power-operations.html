@@ -35,6 +35,10 @@
             <h3 class="h4">Select a power operation option</h3>
         </div>
         <div class="row column power-option">
+            <button id="power__power-on" class="btn-secondary">Power On</button>
+            <p>Attempts to power on the server</p>
+        </div>
+        <div class="row column power-option">
             <button id="power__warm-boot" class="btn-secondary">Warm reboot</button>
             <p>Attempts to perform an orderly shutdown before restarting the server</p>
         </div>
@@ -49,6 +53,16 @@
         <div class="row column power-option">
             <button id="power__hard-shutdown" class="btn-secondary">Immediate shutdown</button>
             <p>Removes power from the server without waiting for software to stop</p>
+            <div class="power__confirm">
+                <div class="power__confirm-message">
+                    <p class="h3"><i></i>Are you sure you want to <strong>warm reboot?</strong></p>
+                    <p>Removes power from the server without waiting for software to stop</p>
+                </div>
+                <div class="power__confirm-buttons">
+                    <button class="btn-primary">Yes</button>
+                    <button class="btn-primary">No</button>
+                </div>
+            </div>
         </div>
     </div>
 </main>
@@ -58,7 +72,19 @@
 <!-- FOR DEMO ONLY __ DO NOT COPY BELOW -->
 <script>
     $('#power__hard-shutdown').on('click', function () {
-        $(this).parents('#power-operations').find('.power__indicator-bar').addClass('power__state-off');
+        var msgheight = $(this).parent().find('.power__confirm').height();
+
+        $(this).parents('#power-operations').find('.power__confirm').addClass('active');
+        $(this).parents('#power-operations').find('.power-option').addClass('disabled');
+        $(this).parent().addClass('transitionAll').css("minHeight", msgheight).removeClass('disabled');
+        $(this).parents('#power-operations').find('.power-option.disabled button').attr("disabled", true);
+    });
+
+    $('.btn-primary').on('click', function(){
+        $(this).parents('#power-operations').find('.power__indicator-bar').toggleClass('power__state-off');
+        $(this).parents('#power-operations').find('.power__confirm').removeClass('active');
+        $(this).parent().addClass('disabled');
+        $(this).parents('.power-option').addClass('disabled');
         $(this).parents('#power-operations').find('.power__state span').html('Off');
     });
 </script>
