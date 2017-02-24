@@ -1,0 +1,23 @@
+button, .button, input[type="submit"] {
+  font-weight: bold;
+  font-size: 1em;
+  text-transform: none;
+  border-radius: 3px;
+  padding: .8rem 3.5rem;
+  height: auto;
+}
+.btn-primary {
+  color: $secbtn__text;
+  background: $secbtn__bg;
+  border: 2px solid $secbtn__border;
+}
+.btn-secondary {
+  color: $secbtn__text;
+  background: transparent;
+  border: 2px solid $secbtn__border;
+  &:hover {
+    background: $lightbg__accent;
+    cursor: pointer;
+    background: $secbtn__bg;
+  }
+}

@@ -1,6 +1,5 @@
 .inline {
   display: inline-block;
-  line-height: 2;
 }
 
 .disabled {
@@ -14,7 +13,7 @@
   clear: both;
 }
 .error {
-  color: $error;
+  color: $error-color;
 }
 
 .hide {
@@ -45,6 +44,10 @@
 
 .no-margin {
   margin: 0px !important;
+}
+
+.no-padding {
+  padding:0px !important;
 }
 
 .no-bottom-margin {

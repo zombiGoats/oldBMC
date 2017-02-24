@@ -1,0 +1,53 @@
+#power-operations {
+
+  .h4 {
+    font-weight: bold;
+  }
+
+  .power__status-log {
+    color: $darkgrey;
+  }
+
+  .power__current-status {
+    border-bottom: 1px solid $lightbg__grey;
+    margin: 3.625em 0 1.2em 0;
+    .h4 {padding: 0; margin: 0 0 .5em 0;}
+  }
+
+  .power__state {
+    span:before {
+      content: '\25CF';
+      display: inline-block;
+      font-size: 1.2em;
+      color: $status-ok;
+      margin-right: .3em;
+      @include slowTransition-all;
+    }
+  }
+  .power__indicator-bar {
+    font-weight: bold;
+    padding: 1.4em 3em;
+    margin-bottom: 3.750em;
+    background-size: 200% 100%;
+    background-image: linear-gradient(to right, $status-ok-light 50%, $lightgrey 50%);
+    transition: background-position 2s ease;
+    p {padding: 0; margin: 0;}
+    &.power__state-off {
+     background-position: 100%;
+      color: $darkgrey;
+      .power__state {
+        span:before {
+          color: $darkgrey;
+        }
+      }
+    }
+  }
+
+  .power-option {
+      border-top: 1px solid $lightgrey;
+      padding: 1.8em 0 1em 1.8em;
+      .btn-secondary {
+        margin-bottom: .5em;
+      }
+    }
+}
