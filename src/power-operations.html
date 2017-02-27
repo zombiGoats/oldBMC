@@ -29,7 +29,7 @@
     <div class="row column">
         <div class="power__indicator-bar  power__state-on">
             <p class="inline">Server BLZ_109284.209.01</p>
-            <p class="power__state inline float-right h3"><span>Off</span></p>
+            <p class="power__state inline float-right h3"><span>On</span></p>
         </div>
     </div>
     <div class="row column">
@@ -59,6 +59,8 @@
         <div class="row column power-option">
             <button id="power__hard-shutdown" class="btn-secondary">Immediate shutdown</button>
             <p>Removes power from the server without waiting for software to stop</p>
+
+            <!-- Confirmation message - to accommodate the message for smaller screens we need to grab the height of the message and apply that height to "power-option" row -->
             <div class="power__confirm">
                 <div class="power__confirm-message">
                     <p class="h3"><i></i>Are you sure you want to <strong>warm reboot?</strong></p>
