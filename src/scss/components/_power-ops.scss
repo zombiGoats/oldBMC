@@ -55,7 +55,7 @@
       }
     }
     &.power__state-off {
-      background-position: 100%;
+      background-position: -100%;
       color: $darkgrey;
       .power__state {
         span:before {
