@@ -27,7 +27,7 @@
       content: '\25CF';
       display: inline-block;
       font-size: 1.2em;
-      color: $status-ok;
+      color: $darkgrey;
       margin-right: .3em;
       @include slowTransition-all;
     }
@@ -40,10 +40,19 @@
     margin-bottom: 3.750em;
     background-size: 200% 100%;
     background-image: linear-gradient(to right, $status-ok-light 50%, $lightgrey 50%);
+    background-position: 100%;
     transition: background-position 2s ease;
     p {
       padding: 0;
       margin: 0;
+    }
+    &.power__state-on {
+      background-position: -200%;
+      .power__state {
+        span:before {
+          color: $status-ok;
+        }
+      }
     }
     &.power__state-off {
       background-position: 100%;
