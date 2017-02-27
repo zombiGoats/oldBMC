@@ -18,6 +18,8 @@
     <div class="row column">
         <h1>Server power operation</h1>
     </div>
+
+    <!-- Current status and bar display the state of the server. Class 'power__state-off' is applied to bar and 'power__state' text switches to say "off"-->
     <div class="row column">
         <div class="power__current-status ">
             <p class="inline h4">Current status</p>
@@ -41,7 +43,7 @@
             <p>Attempts to power on the server</p>
         </div>
 
-        <!-- Power reboot/shutdown options -->
+        <!-- Power reboot/shutdown options : when server is off these get class 'disabled' and can not be interacted with -->
         <div class="row column power-option">
             <button id="power__warm-boot" class="btn-secondary">Warm reboot</button>
             <p>Attempts to perform an orderly shutdown before restarting the server</p>
