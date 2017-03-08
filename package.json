@@ -6,7 +6,7 @@
     "prebuild": "npm run clean -s",
     "scss": "node-sass --output-style compressed -o dist/css src/scss/",
     "autoprefixer": "postcss -u autoprefixer -r dist/css/*",
-    "uglify": "mkdir -p dist/js && mkdir -p dist/js/vendor && uglifyjs src/js/*.js -m -o dist/js/app.min.js && uglifyjs src/js/vendor/*.js -m -c -o dist/js/vendor/vendor.min.js",
+    "uglify": "mkdir -p dist/js && mkdir -p dist/js/vendor && cat  src/js/*.js > dist/js/app.min.js && uglifyjs dist/js/app.min.js -m -o dist/js/app.min.js && uglifyjs src/js/vendor/*.js -m -c -o dist/js/vendor/vendor.min.js",
     "imagemin": "imagemin src/img/* --out-dir=dist/img/",
     "serve": "browser-sync start --server 'dist' --files 'dist/css/*.css, dist/js/*.js, dist/*.html'",
     "build:css": "npm run scss && npm run autoprefixer",
