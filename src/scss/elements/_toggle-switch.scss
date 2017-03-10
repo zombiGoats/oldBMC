@@ -18,6 +18,7 @@
   height: 1px;
   width: 1px;
 }
+
 .toggle-switch + label {
   display: block;
   position: relative;
@@ -27,6 +28,11 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.toggle label {
+  text-indent: -999px;
+  transform: translateY(-50%);
 }
 
 input.toggle-switch__round-flat + label {
