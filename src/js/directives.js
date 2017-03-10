@@ -28,7 +28,7 @@ angular
             $scope.logout = function(){
                 userModel.logout();
                 $location.path('/logout');
-            }
+            };
 
             $scope.refresh = function(){
                 console.log("--refresh status--");
@@ -47,7 +47,8 @@ angular
         },
         'controller': ['$scope', 'dataService', function($scope, dataService){
             $scope.$watch('showNavigation', function(){
-                var padingTop = 0;
+                var paddingTop = 0;
+                $scope.toggle = false;
                 $scope.firstLevel = 'overview';
                 $scope.secondLevel = 'system_overview';
                 if($scope.showNavigation){
@@ -56,6 +57,7 @@ angular
                 dataService.bodyStyle = {'padding-top': paddingTop + 'px'};
                 $scope.navStyle = {'top': paddingTop + 'px'};
             });
+
         }]
     };
  })
@@ -84,7 +86,7 @@ angular
             scope.$watch('confirm', function(){
                 if(scope.confirm){
                     $timeout(function(){
-                        angular.element(e[0].parentNode).css({'min-height': e[0].querySelector('.power__confirm').offsetHeight + 'px'});
+                        angular.element(e[0].parentNode).css({'min-height': e[0].querySelector('.inline__confirm').offsetHeight + 'px'});
                     }, 0);
                 }else{
                     angular.element(e[0].parentNode).css({'min-height': 0+ 'px'});
