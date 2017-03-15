@@ -4,8 +4,8 @@
   margin-left: $nav__toplvlWidth;
   padding: 1em .1em;
   transition: left 1s ease;
-  @include mediaQuery(medium){
+  @include mediaQuery(x-small){
     margin-left: $nav__toplvlWidth + $nav__seclvlWidth;
-    padding: 1.4em 3.750em;
+    padding: 1rem 2rem;
   }
 }

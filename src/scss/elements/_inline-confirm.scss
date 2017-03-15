@@ -11,6 +11,7 @@
   background: $darkbg__primary;
   color: $white;
   padding: 2em 2em 1.55em 2em;
+  overflow: hidden;
   &.active {
     transform: translateY(0);
     @include fastTransition-all;

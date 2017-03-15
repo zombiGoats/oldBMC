@@ -129,6 +129,7 @@ $nav__seclvlWidth: 240px;
     }
     &.active {background: $white;}
     &.active,
+    &:focus,
     &:hover {
       a {color: #4b5d78;}
       a:after {

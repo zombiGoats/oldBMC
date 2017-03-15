@@ -41,12 +41,13 @@
   // Power bar indicator
   .power__indicator-bar {
     font-weight: bold;
-    padding: 1.4em 3em;
+    padding: 1.4em 3em 0;
     margin-bottom: 3.750em;
     background-size: 200% 100%;
     background-image: linear-gradient(to right, $status-ok-light 50%, $lightgrey 50%);
     background-position: 100%;
     transition: background-position 2s ease;
+    overflow: hidden;
     p {
       padding: 0;
       margin: 0;
@@ -82,13 +83,19 @@
   // Power button options
   .power-option {
     border-top: 1px solid $lightgrey;
-    padding: 1.8em 0 1em 1.8em;
+    padding: 1.8em 0 1em 0;
     position: relative;
     overflow: hidden;
     min-height: 1px;
+    min-width: 100%;
     .btn-secondary {
       margin-bottom: .5em;
-      min-width: 300px;
+      @include mediaQuery(small) {
+        min-width: 300px;
+      }
+    }
+    @include mediaQuery(small){
+      padding: 1.8em 0 1em 1.8em;
     }
   }
 

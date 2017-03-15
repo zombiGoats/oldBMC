@@ -1,4 +1,4 @@
-<nav role="navigation">
+<nav>
     <ul id="nav__top-level" ng-style="navStyle">
         <li>
             <button class="btn-overview" ng-class="{opened: firstLevel == 'overview'}" ng-click="firstLevel = 'overview';" tabindex="1">
@@ -43,7 +43,7 @@
                 <span>Help</span></button>
         </li>
     </ul>
-    <ul class="nav__second-level btn-overview" ng-style="navStyle" ng-show="firstLevel == 'overview'" ng-class="{opened: firstLevel == 'overview'}">
+    <ul class="nav__second-level btn-overview" ng-style="navStyle" ng-class="{opened: firstLevel == 'overview'}">
         <li ng-class="{'active': (path == '/system-overview')}" tabindex="2"><a href="#/system-overview">System Overview</a></li>
         <li ng-class="{'active': (path == '/power-operations')}" tabindex="3"><a href="#/power-operations">Server power operations</a></li>
         <li ng-class="{'active': (path == '/power-consumption')}"><a href="" tabindex="4">Power consumption</a></li>
@@ -51,17 +51,17 @@
         <li ng-class="{'active': (path == '/unit-id')}"><a href="#/unit-id" tabindex="6">Unit ID</a></li>
         <li ng-class="{'active': (path == '/bmc-reboot')}"><a href="#/bmc-reboot" tabindex="7">BMC Reboot</a></li>
     </ul>
-    <ul class="nav__second-level btn-settings" ng-style="navStyle" ng-show="firstLevel == 'settings'" ng-class="{opened: firstLevel == 'settings'}">
+    <ul class="nav__second-level btn-settings" ng-style="navStyle"  ng-class="{opened: firstLevel == 'settings'}">
         <li><a href="">2nd level 4</a></li>
         <li><a href="">2nd level 5</a></li>
         <li><a href="">2nd level 6</a></li>
     </ul>
-    <ul class="nav__second-level btn-multi" ng-style="navStyle" ng-show="firstLevel == 'multi_system'" ng-class="{opened: firstLevel == 'multi_system'}">
+    <ul class="nav__second-level btn-multi" ng-style="navStyle"  ng-class="{opened: firstLevel == 'multi_system'}">
         <li><a href="">2nd level 7</a></li>
         <li><a href="">2nd level 8</a></li>
         <li><a href="">2nd level 9</a></li>
     </ul>
-    <ul class="nav__second-level btn-help" ng-style="navStyle" ng-show="firstLevel == 'help'" ng-class="{opened: firstLevel == 'help'}">
+    <ul class="nav__second-level btn-help" ng-style="navStyle"  ng-class="{opened: firstLevel == 'help'}">
         <li><a href="">2nd level 10</a></li>
         <li><a href="">2nd level 212</a></li>
         <li><a href="">2nd level 312</a></li> 

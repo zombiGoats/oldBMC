@@ -8,7 +8,6 @@
 @mixin borderRadius {
   -webkit-border-radius: 60px;
   -moz-border-radius: 60px;
-  -ms-border-radius: 60px;
   border-radius: 60px;
 }
 
@@ -17,6 +16,7 @@
   left: 20px;
   height: 1px;
   width: 1px;
+  opacity: 0;
 }
 
 .toggle-switch + label {
@@ -31,8 +31,8 @@
 }
 
 .toggle label {
-  text-indent: -999px;
-  transform: translateY(-50%);
+  text-indent: -9999px;
+  transform: translateY(-50%); // keeps switch centered
 }
 
 input.toggle-switch__round-flat + label {

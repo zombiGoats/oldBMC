@@ -27,6 +27,12 @@
 
 }
 
+@mixin status-light__warn {
+  @include status-light;
+  color: $darkgrey;
+
+}
+
 .status-light__disabled {
   color: $darkgrey;
   &::before {
@@ -42,6 +48,13 @@
 
 .status-light__error {
   color: $error-color;
+  &::before {
+    @include status-light__error;
+  }
+}
+
+.status-light__warn {
+  color: $status-warn;
   &::before {
     @include status-light__error;
   }
