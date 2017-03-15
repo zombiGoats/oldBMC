@@ -14,10 +14,10 @@ angular
             $scope.server_status = -1;
             $scope.dataService = dataService;
             APIUtils.login(function(){
-                APIUtils.getServerStatus(function(status){
+                APIUtils.getHostState(function(status){
                     if(status == 'xyz.openbmc_project.State.Host.HostState.Off'){
                         $scope.server_status = -1;
-                    }else if(status == 'xyz.openbmc_project.State.Host.HostState.On'){
+                    }else if(status == 'xyz.openbmc_project.State.Host.HostState.Running'){
                         $scope.server_status = 1;
                     }else{
                         $scope.server_status = 0;

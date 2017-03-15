@@ -44,7 +44,9 @@ angular
             booting: 'Quiesced'
         },
         getChassisState: function(callback){
-          $http.get(SERVICE.API_CREDENTIALS.ip + "/xyz/openbmc_project/state/chassis0", {
+          $http({
+            method: 'GET',
+            url: SERVICE.API_CREDENTIALS.host + "/xyz/openbmc_project/state/chassis0",
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
@@ -59,7 +61,9 @@ angular
           });
         },
         getHostState: function(callback){
-          $http.get(SERVICE.API_CREDENTIALS.ip + "/xyz/openbmc_project/state/host0", {
+          $http({
+            method: 'GET',
+            url: SERVICE.API_CREDENTIALS.host + "/xyz/openbmc_project/state/host0",
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
@@ -74,13 +78,15 @@ angular
           });
         },
         login: function(callback){
-          $http.post(SERVICE.API_CREDENTIALS.host + "/login", {
+          $http({
+            method: 'POST',
+            url: SERVICE.API_CREDENTIALS.host + "/login",
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
             withCredentials: true,
-            data: JSON.stringify({"data": [SERVICE.API_CREDENTIALS.user, SERVICE.API_CREDENTIALS.password]}),
+            data: JSON.stringify({"data": [SERVICE.API_CREDENTIALS.user, SERVICE.API_CREDENTIALS.password]})
           }).success(function(response){
             if(callback){
                 callback(response);
@@ -90,13 +96,15 @@ angular
           });
         },
         chassisPowerOn: function(callback){
-          $http.post(SERVICE.API_CREDENTIALS.host + "/org/openbmc/control/chassis0/action/powerOn", {
+          $http({
+            method: 'POST',
+            url: SERVICE.API_CREDENTIALS.host + "/xyz/openbmc_project/state/host0",
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
             withCredentials: true,
-            data: JSON.stringify({"data": []}),
+            data: JSON.stringify({"data": []})
           }).success(function(response){
                 var json = JSON.stringify(response);
                 var content = JSON.parse(json);
@@ -112,13 +120,15 @@ angular
           });
         },
         chassisPowerOff: function(callback){
-          $http.post(SERVICE.API_CREDENTIALS.host + "/org/openbmc/control/chassis0/action/powerOff", {
+          $http({
+            method: 'POST',
+            url: SERVICE.API_CREDENTIALS.host + "/xyz/openbmc_project/state/host0",
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
             withCredentials: true,
-            data: JSON.stringify({"data": []}),
+            data: JSON.stringify({"data": []})
           }).success(function(response){
                 var json = JSON.stringify(response);
                 var content = JSON.parse(json);
@@ -134,13 +144,15 @@ angular
           });
         },
         hostPowerOn: function(callback){
-          $http.post(SERVICE.API_CREDENTIALS.host + "/org/openbmc/control/host0/action/powerOn", {
+          $http({
+            method: 'POST',
+            url: SERVICE.API_CREDENTIALS.host + "xyz/openbmc_project/state/host0/attr/RequestedHostTransition",
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
             withCredentials: true,
-            data: JSON.stringify({"data": []}),
+            data: JSON.stringify({"data": "xyz.openbmc_project.State.Host.Transition.Off"})
           }).success(function(response){
                 var json = JSON.stringify(response);
                 var content = JSON.parse(json);
@@ -156,7 +168,9 @@ angular
           });
         },
         hostPowerOff: function(callback){
-          $http.post(SERVICE.API_CREDENTIALS.host + "/org/openbmc/control/host0/action/powerOff", {
+          $http({
+            method: 'POST',
+            url: SERVICE.API_CREDENTIALS.host + "/xyz/openbmc_project/state/host0",
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
@@ -178,7 +192,9 @@ angular
           });
         },
         hostReboot: function(callback){
-          $http.post(SERVICE.API_CREDENTIALS.host + "/org/openbmc/control/host0/action/reboot", {
+          $http({
+            method: 'POST',
+            url: SERVICE.API_CREDENTIALS.host + "/xyz/openbmc_project/state/host0",
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
@@ -200,13 +216,15 @@ angular
           });
         },
         hostShutdown: function(callback){
-          $http.post(SERVICE.API_CREDENTIALS.host + "/org/openbmc/control/host0/action/shutdown", {
+          $http({
+            method: 'POST',
+            url: SERVICE.API_CREDENTIALS.host + "/xyz/openbmc_project/state/host0",
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
             withCredentials: true,
-            data: JSON.stringify({"data": []}),
+            data: JSON.stringify({"data": []})
           }).success(function(response){
                 var json = JSON.stringify(response);
                 var content = JSON.parse(json);
