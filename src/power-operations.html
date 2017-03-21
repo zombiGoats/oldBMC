@@ -32,22 +32,22 @@
 
         <!-- Power reboot/shutdown options : when server is off all of these are hidden. When one option is selected, the others are disabled. -->
         <div class="row column power-option" ng-hide="dataService.server_state == 'Off'" ng-class="{disabled: (confirm && !warmboot_confirm) || dataService.loading, transitionAll: confirm && warmboot_confirm}">
-            <button id="power__warm-boot" class="btn-secondary" ng-click="warmRebootConfirm()" role="button">Warm reboot</button>
+            <button id="power__warm-boot" class="btn-secondary" ng-click="warmRebootConfirm()" role="button"><i>&#x21BB</i> Warm reboot</button>
             <p>Attempts to perform an orderly shutdown before restarting the server</p>
             <confirm title="Warm Reboot" message="perform an orderly shutdown" confirm="warmboot_confirm" ng-show="warmboot_confirm" callback="warmReboot"></confirm>
         </div>
         <div class="row column power-option" ng-hide="dataService.server_state == 'Off'" ng-class="{disabled: (confirm && !coldboot_confirm) || dataService.loading, transitionAll: confirm && coldboot_confirm}">
-            <button id="power__cold-boot" class="btn-secondary" ng-click="coldRebootConfirm()" role="button">Cold reboot</button>
+            <button id="power__cold-boot" class="btn-secondary" ng-click="coldRebootConfirm()" role="button"><i>&#x21BB</i> Cold reboot</button>
             <p>Shuts down the server immediately, then restarts it</p>
             <confirm title="Cold Reboot" message="Shutdown server immediately." confirm="coldboot_confirm" ng-show="coldboot_confirm" cancel="coldbootCancel" callback="coldReboot"></confirm>
         </div>
         <div class="row column power-option" ng-hide="dataService.server_state == 'Off'" ng-class="{disabled: (confirm && !orderly_confirm) || dataService.loading, transitionAll: confirm && orderly_confirm}">
-            <button id="power__soft-shutdown" class="btn-secondary" ng-click="orderlyShutdownConfirm()" role="button">Orderly shutdown</button>
+            <button id="power__soft-shutdown" class="btn-secondary" ng-click="orderlyShutdownConfirm()" role="button"><img src="img/icon-power.svg" />Orderly shutdown</button>
             <p>Attempts to stop all software on the server before removing power</p>
             <confirm title="Orderly shutdown" message="Attempts to stop all software orderly." confirm="orderly_confirm" ng-show="orderly_confirm" cancel="orderlyShutdownCancel" callback="orderlyShutdown"></confirm>
         </div>
         <div class="row column power-option" ng-hide="dataService.server_state == 'Off'" ng-class="{disabled: (confirm && !immediately_confirm) || dataService.loading, transitionAll: confirm && immediately_confirm}">
-            <button id="power__hard-shutdown" class="btn-secondary" ng-click="immediateShutdownConfirm()" role="button">Immediate shutdown</button>
+            <button id="power__hard-shutdown" class="btn-secondary" ng-click="immediateShutdownConfirm()" role="button"><img src="img/icon-power.svg" />Immediate shutdown</button>
             <p>Removes power from the server without waiting for software to stop</p>
             <confirm title="Immediate shutdown" message="Removes power from the server immediately." confirm="immediately_confirm" ng-show="immediately_confirm" cancel="immediatelyShutdownCancel" callback="immediateShutdown"></confirm>
         </div>
