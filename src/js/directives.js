@@ -11,7 +11,7 @@ angular
             'path': '='
         },
         'controller': ['$scope','dataService', 'userModel', '$location', function($scope, dataService, userModel, $location){
-            $scope.server_status = -1;
+            $scope.server_status = 01;
             $scope.dataService = dataService;
             APIUtils.login(function(){
                 APIUtils.getHostState(function(status){
