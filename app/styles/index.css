@@ -2425,15 +2425,6 @@ header {
     right: .3em;
     transition: all .5s ease; }
 
-.page-header {
-  position: relative;
-  border-bottom: 1px solid #b8c1c1;
-  margin: 2.625em 0 1.2em 0; }
-  .page-header .h4 {
-    padding: 0;
-    margin: 0 0 .5em 0;
-    font-weight: bold; }
-
 .content__container {
   margin-left: 120px;
   padding: 1em .1em;
