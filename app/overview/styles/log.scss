@@ -1,6 +1,29 @@
 // Event Log SCSS
 
 #event-log {
+  .accord-trigger {
+    transform: rotate(90deg);
+    font-size: 1.5em;
+    color: lighten($darkgrey, 10%);
+    padding: .3em;
+    display: block;
+    margin: 0 auto;
+    transition: all .2s ease;
+    &:after {
+      content: '\276F'
+    }
+    &.active {
+      transform: rotate(-90deg);
+      color: $darkbg__accent;
+    }
+    &:focus {
+      outline: 0;
+      color: $darkbg__accent;
+    }
+  }
+  .row {
+    padding: 0;
+  }
 
   #event-filter {
     button {
@@ -12,7 +35,6 @@
       &.first,
       &.last {
         border-radius: 3px;
-
       }
     }
     .btn-primary {
@@ -40,7 +62,7 @@
   .event-log__timezone .event-log__tz-select {
     position: relative;
     padding: 1em;
-    margin-top: 0px;
+    margin-top: -10px;
     &:after {
       content: '\25bC';
       display: inline-block;
@@ -57,7 +79,7 @@
     width: 100%;
     border: 1px solid $lightbg__grey;
     margin-top: -5px;
-    box-shadow: 0px 4px 10px -2px $lightgrey;
+    box-shadow: 0 4px 10px -2px $lightgrey;
     li {
       list-style-type: none;
     }
@@ -73,4 +95,141 @@
 
 }
 
-//end #event-log
+// Event Log Events
+#event-log__events {
+  display: block;
+  margin-top: 1.6em;
+  border-top: 1px solid $lightgrey;
+  position: relative;
+
+  #events__actions-bar {
+    padding-top: 1em;
+  }
+
+  .event-log__col-check {
+    max-width: 60px;
+    text-align: center;
+  }
+  .col-logged-events {
+    span {
+      display: inline-block;
+      font-weight: 700;
+      margin-right: .3em;
+    }
+  }
+
+  //Export log
+  .btn-export {
+    text-transform: capitalize;
+    color: $lightbg__primary;
+    font-size: .9em;
+    font-weight: 700;
+    position: relative;
+    padding: 0 0 1em 2em;
+    float: right;
+    &:before {
+      content: '\21E5';
+      position: absolute;
+      font-size: 1.7em;
+      vertical-align: middle;
+      transform: rotate(90deg);
+      display: inline-block;
+      left: 2px;
+      top: -5px;
+    }
+  }
+
+  // Single event log card
+  .event-log__single-event {
+    border-top: 1px solid $lightgrey;
+    padding: 1em 1em 0 0em;
+    &:hover {
+      background: $lightblue;
+    }
+  }
+
+  .event-log__event-info {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  // Event metadata row
+  .event__metadata-row {
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: 0.5s linear all;
+    transition: 0.2s linear all;
+    &.active {
+      height: 220px;
+    }
+  }
+
+  //Event metadata
+  .event__metadata {
+    height: 200px;
+    overflow: scroll;
+    border: 1px solid $lightgrey;
+    padding: .5em;
+    background: $white;
+    display: block;
+    margin-bottom: 1.5em;
+  }
+
+  //Event priorities
+  .event__priority {
+    color: $white;
+    font-size: .8em;
+    text-transform: uppercase;
+    padding: 2px 2em;
+    font-weight: 700;
+    line-height: inherit;
+    min-width: 103px;
+    text-align: center;
+
+    &.high-priority {
+      background: $error-color;
+
+    }
+    &.med-priority {
+      background: $alert__warning;
+
+    }
+    &.low-priority {
+      background: $lightbg__primary;
+
+    }
+  }
+
+  //Event Severity
+  .event__severity {
+    font-size: .7em;
+    text-transform: uppercase;
+    color: $darkgrey;
+    font-weight: 700;
+    margin: 0 1em;
+    min-width: 103px;
+  }
+  
+  //Event description
+  .event__description {
+    font-weight: 400;
+  }
+
+  //Event ID
+  .event__id {
+    @include fontCourierBold;
+    font-size: .9em;
+    color: $darkgrey;
+  }
+
+  .event__timestamp {
+    @include fontCourierBold;
+    font-size: .9em;
+    color: #999999;
+    margin-left: 1.2em;
+  }
+
+}//end event-log__events
+
+
+

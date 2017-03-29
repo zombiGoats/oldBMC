@@ -19,6 +19,16 @@ window.angular && (function (angular) {
             'dataService',
             function($scope, $window, APIUtils, dataService, userModel){
                 $scope.dataService = dataService;
+
+                // priority buttons
+                $scope.togglehigh = false;
+                $scope.togglemed = false;
+                $scope.togglelow = false;
+
+                // metadata show/hide
+                $scope.event__metadatarow = false;
+                $scope.event__metadatarow_1 = false;
+
             }
         ]
     );
