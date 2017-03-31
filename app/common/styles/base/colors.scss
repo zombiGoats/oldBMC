@@ -2,8 +2,10 @@
 $white: #ffffff;
 $black: #333;
 $darkgrey: #666;
+$medgrey: #d7dbe0;
 $lightgrey: #ccc;
 $lightblue: #f0f2f5;
+$purple: #5A3EC8;
 $field__disabled: #d8d8d8;
 $btn__disabled-txt: #a6a5a6;
 $btn__disabled-bg: #d8d8d8;
@@ -36,7 +38,7 @@ $alert__message: rgb(203, 221, 235);
 // Links
 $links: #648FFF;
 $links__hover: $lightbg__accent;
-$links__visited: #5A3EC8;
+$links__visited: $purple;
 $links__disabled: rgba(27, 40, 52, 0.70);
 
 // Navigation

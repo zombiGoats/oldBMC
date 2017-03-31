@@ -1,0 +1,35 @@
+.dropdown__button {
+  position: relative;
+  padding: 1em;
+  margin-top: -10px;
+  &:after {
+    content: '\25bC';
+    display: inline-block;
+    margin-left: 5px;
+    font-size: .8em;
+  }
+}
+
+.dropdown__list {
+  position: absolute;
+  z-index: 100;
+  right: 0;
+  top: 100%;
+  background: $white;
+  padding: 0;
+  width: 100%;
+  border: 1px solid $lightbg__grey;
+  margin-top: -5px;
+  box-shadow: 0 4px 10px -2px $lightgrey;
+  li {
+    list-style-type: none;
+  }
+  button {
+    padding: 1em;
+    text-align: left;
+    width: 100%;
+    &:hover {
+      background: $lightbg__accent;
+    }
+  }
+}
