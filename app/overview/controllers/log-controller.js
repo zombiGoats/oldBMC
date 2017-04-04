@@ -20,6 +20,7 @@ window.angular && (function (angular) {
             function($scope, $window, APIUtils, dataService, userModel){
                 $scope.dataService = dataService;
 
+                $scope.dropdown_selected = false;
             }
         ]
     );
