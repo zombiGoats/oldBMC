@@ -1645,9 +1645,9 @@ p {
 a {
   color: #648FFF; }
   a:visited {
-    color: #5A3EC8; }
+    color: #19273c; }
   a:hover {
-    color: #d8e2fc; }
+    color: #3c6df0; }
   a :focus {
     color: #648FFF; }
 
@@ -2173,7 +2173,7 @@ input.toggle-switch__round-flat:checked + label:after {
     background: #3c6df0;
     border: 2px solid #3c6df0; }
 
-@media (min-width: 85.375em) {
+@media (min-width: 64em) {
   .inline__confirm-buttons {
     float: right; } }
 
@@ -2188,6 +2188,137 @@ input.toggle-switch__round-flat:checked + label:after {
   vertical-align: middle;
   font-style: normal;
   margin-right: 15px; }
+
+.pagination,
+.pagination li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.pagination li {
+  background-color: transparent;
+  list-style-type: none; }
+
+.pagination a {
+  font-weight: 300;
+  padding-top: 1px;
+  text-decoration: none;
+  border: 1px solid #d7dbe0;
+  border-left-width: 0;
+  min-width: 44px;
+  min-height: 44px;
+  color: #19273c; }
+
+.pagination li:not([class*="current"]) a:hover {
+  background-color: #3c6df0;
+  color: #ffffff; }
+
+.pagination li:not([class*="current"]) a:focus,
+.pagination li:not([class*="current"]) a:active {
+  border-left-width: 1px; }
+
+.pagination li:first-of-type a {
+  border-left-width: 1px; }
+
+.pagination li:first-of-type span,
+.pagination li:last-of-type span,
+.pagination li:nth-of-type(2) span,
+.pagination li:nth-last-of-type(2) span {
+  /* screen readers only */
+  position: absolute;
+  top: -9999px;
+  left: -9999px; }
+
+.pagination li:first-child a::before,
+.pagination li:last-child a::after,
+.pagination li:nth-of-type(2) a::before,
+.pagination li:nth-last-of-type(2) a::after {
+  display: inline-block;
+  text-rendering: auto;
+  font-size: 1.3em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0); }
+
+.pagination li:first-child a::before,
+.pagination li:last-child a::after {
+  content: "\027A0"; }
+
+.pagination li:nth-of-type(2) a::before,
+.pagination li:nth-last-of-type(2) a::after {
+  content: "\0279E"; }
+
+.pagination li:first-child a::before,
+.pagination li:nth-of-type(2) a::before {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+.pagination li.current a {
+  padding-top: .25em;
+  color: #ffffff;
+  background-color: #3c6df0;
+  cursor: default;
+  pointer-events: none;
+  font-weight: 700; }
+
+@media only screen and (max-width: 64.063em) {
+  .pagination li:first-child,
+  .pagination li:last-child {
+    /* screen readers only */
+    position: absolute;
+    top: -9999px;
+    left: -9999px; }
+  .pagination li:nth-of-type(2) a {
+    border-left-width: 1px; } }
+
+@media only screen and (max-width: 40.063em) {
+  .pagination li {
+    /* screen readers only */
+    position: absolute;
+    top: -9999px;
+    left: -9999px; }
+  .pagination li.current,
+  .pagination li:first-of-type,
+  .pagination li:last-of-type,
+  .pagination li:nth-of-type(2),
+  .pagination li:nth-last-of-type(2) {
+    position: initial;
+    top: initial;
+    left: initial; }
+  .pagination li:nth-of-type(2) a {
+    border-left-width: 0; } }
+
+@media only screen and (max-width: 30.063em) {
+  h1 {
+    font-size: 1.35em !important; }
+  .pagination li:first-child,
+  .pagination li:last-child {
+    /* screen readers only */
+    position: absolute;
+    top: -9999px;
+    left: -9999px; }
+  .pagination li:nth-of-type(2) a {
+    border-left-width: 1px; } }
+
+@media only screen and (max-width: 15.063em) {
+  /* For watches? */
+  .pagination li {
+    width: 50%; }
+  .pagination li.current {
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    width: 100%;
+    border-left-width: 1px; } }
 
 .dropdown__button {
   position: relative;
@@ -2906,6 +3037,21 @@ header {
   border-top: 1px solid #ccc;
   position: relative;
   overflow: hidden; }
+  #event-log__events .inline__confirm {
+    height: auto;
+    margin-left: 0;
+    left: 0;
+    padding: 1em 2em 1em 2em; }
+  #event-log__events .inline__confirm-message {
+    margin-top: 5px;
+    margin-bottom: -10px; }
+  #event-log__events .inline__confirm-buttons .btn-primary {
+    padding: .5em 2em;
+    min-height: 25px;
+    margin-top: .5em; }
+    @media (min-width: 64em) {
+      #event-log__events .inline__confirm-buttons .btn-primary {
+        margin-top: 0; } }
   #event-log__events #event__actions-bar {
     padding-top: 1em;
     padding-right: 1em;
@@ -2957,9 +3103,11 @@ header {
     margin-left: 5px;
     padding: .5em .5em; }
   #event-log__events .event-log__single-event {
+    position: relative;
     border-top: 1px solid #ccc;
-    padding: 1em 1em 0 0em;
-    background: #f0f2f5; }
+    padding: 1em 1em 1em 0em;
+    background: #f0f2f5;
+    overflow: hidden; }
     #event-log__events .event-log__single-event.active, #event-log__events .event-log__single-event.selected {
       background: #ffffff; }
     #event-log__events .event-log__single-event:hover {
@@ -3005,18 +3153,18 @@ header {
     color: #999999;
     margin-left: 1.2em; }
   #event-log__events .event__metadata-row {
-    height: 0;
+    max-height: 0;
     overflow: hidden;
-    -webkit-transition: 0.5s linear all;
-    transition: 0.2s linear all; }
+    -webkit-transition: 0.5s linear max-height;
+    transition: 0.5s linear max-height; }
     #event-log__events .event__metadata-row.active {
-      height: 400px; }
+      max-height: 1000px; }
       @media (min-width: 47.938em) {
         #event-log__events .event__metadata-row.active {
-          height: 320px; } }
+          max-height: 1000px; } }
       @media (min-width: 64em) {
         #event-log__events .event__metadata-row.active {
-          height: 280px; } }
+          max-height: 1000px; } }
   #event-log__events .event__metadata {
     height: 200px;
     overflow-y: scroll;
@@ -3040,7 +3188,10 @@ header {
     padding-top: .3em; }
   #event-log__events .event__related-item {
     margin-right: 1em;
-    padding-top: .3em; }
+    padding-top: .3em;
+    display: inline-block;
+    float: left;
+    clear: both; }
   #event-log__events .event__actions {
     margin-left: -1em; }
     @media (min-width: 64em) {

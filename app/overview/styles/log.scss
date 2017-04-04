@@ -119,6 +119,26 @@
   position: relative;
   overflow: hidden;
 
+  .inline__confirm {
+    height: auto;
+    margin-left: 0;
+    left: 0;
+    padding: 1em 2em 1em 2em
+  }
+
+  .inline__confirm-message {
+    margin-top: 5px;
+    margin-bottom: -10px;
+  }
+  .inline__confirm-buttons .btn-primary {
+    padding: .5em 2em;
+    min-height: 25px;
+    margin-top: .5em;
+    @include mediaQuery(medium) {
+      margin-top: 0;
+    }
+  }
+
   #event__actions-bar {
     padding-top: 1em;
     padding-right: 1em;
@@ -135,6 +155,7 @@
         margin-right: -20px;
       }
     }
+
   }
 
   .event-log__col-check {
@@ -186,9 +207,11 @@
 
   // Single event log card
   .event-log__single-event {
+    position: relative;
     border-top: 1px solid $lightgrey;
-    padding: 1em 1em 0 0em;
+    padding: 1em 1em 1em 0em;
     background: $lightblue;
+    overflow: hidden;
     &.active,
     &.selected {
       background: $white;
@@ -263,17 +286,17 @@
 
   // Event metadata row
   .event__metadata-row {
-    height: 0;
+    max-height: 0;
     overflow: hidden;
-    -webkit-transition: 0.5s linear all;
-    transition: 0.2s linear all;
+    -webkit-transition: 0.5s linear max-height;
+    transition: 0.5s linear max-height;
     &.active {
-      height: 400px;
+      max-height: 1000px; //max-height used to allow flexible height of content and still allow transition
       @include mediaQuery(small) {
-        height: 320px;
+        max-height: 1000px;
       }
       @include mediaQuery(medium) {
-        height: 280px;
+        max-height: 1000px;
       }
     }
   }
@@ -312,6 +335,9 @@
   .event__related-item {
     margin-right: 1em;
     padding-top: .3em;
+    display: inline-block;
+    float: left;
+    clear: both;
   }
   .event__actions {
     margin-left: -1em;
