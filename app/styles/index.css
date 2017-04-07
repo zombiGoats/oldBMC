@@ -1689,6 +1689,11 @@ h5, .h5 {
   font-size: 1rem;
   letter-spacing: -.05rem; }
 
+.content-header {
+  font-weight: 700;
+  margin-bottom: 0;
+  margin-top: 2em; }
+
 .inline {
   display: inline-block; }
 
@@ -1730,6 +1735,9 @@ h5, .h5 {
   position: fixed;
   top: 130px;
   z-index: 200; }
+
+.bold {
+  font-weight: 700; }
 
 .no-margin {
   margin: 0px !important; }
@@ -2147,6 +2155,25 @@ input.toggle-switch__round-flat:checked + label:after {
 .event__low {
   background: #cad7fb; }
 
+.priority-tag {
+  color: #ffffff;
+  font-size: .8em;
+  text-transform: uppercase;
+  padding: 2px 2em;
+  font-weight: 700;
+  line-height: inherit;
+  min-width: 103px;
+  text-align: center; }
+  .priority-tag.high-priority {
+    background: #e62425; }
+  .priority-tag.med-priority {
+    background: #ff7f00; }
+  .priority-tag.low-priority {
+    background: #3c6df0; }
+  .priority-tag.event-resolved {
+    background: #5A3EC8;
+    padding: 2px 1em; }
+
 .inline__confirm {
   position: absolute;
   top: 0;
@@ -2410,6 +2437,48 @@ input.toggle-switch__round-flat:checked + label:after {
     order: 2;
     width: 100%;
     border-left-width: 1px; } }
+
+.threshold-chart {
+  position: relative;
+  line-height: 0;
+  padding: .8em 1em 2em;
+  overflow: visible; }
+  @media (min-width: 64em) {
+    .threshold-chart {
+      max-width: 70%; } }
+  .threshold-chart .threshold__marker {
+    position: absolute;
+    top: 0;
+    bottom: 20px;
+    width: 4px;
+    background-color: #333;
+    transition: all 1.5s ease; }
+    .threshold-chart .threshold__marker .threshold__value {
+      position: absolute;
+      bottom: -25px;
+      left: 0;
+      margin: 0;
+      transform: translateX(-50%);
+      color: #333;
+      padding: 3px 6px;
+      font-weight: 400;
+      font-size: 1.3em; }
+  .threshold-chart .threshold {
+    display: inline-block;
+    background-color: #cbddeb;
+    min-width: 10%;
+    min-height: 25px;
+    margin: 0 -3px; }
+    .threshold-chart .threshold.thresh__low-critical {
+      background-color: #f07f80; }
+    .threshold-chart .threshold.thresh__low-warn {
+      background-color: #ffb266; }
+    .threshold-chart .threshold.thresh__normal {
+      min-width: 60%; }
+    .threshold-chart .threshold.thresh__high-warn {
+      background-color: #ffb266; }
+    .threshold-chart .threshold.thresh__high-critical {
+      background-color: #f07f80; }
 
 .dropdown__button {
   position: relative;
@@ -3231,6 +3300,94 @@ section.row {
       #event-log__events .event__actions {
         float: right; } }
   #event-log__events .event__icon {
+    width: 20px;
+    height: 20px;
+    font-weight: normal;
+    margin-right: .5em;
+    margin-top: -3px;
+    display: inline-block; }
+
+#sensors #sensors__detail {
+  display: block;
+  margin-top: 1.6em;
+  border-top: 1px solid #ccc;
+  position: relative;
+  overflow: hidden; }
+
+#sensor__details {
+  display: block;
+  margin-top: 1.6em;
+  border-top: 1px solid #ccc;
+  position: relative;
+  overflow: hidden; }
+  #sensor__details .btn-export {
+    text-transform: capitalize;
+    color: #333;
+    font-size: .9em;
+    font-weight: 700;
+    position: relative;
+    padding: 0 0 1em 2em; }
+    #sensor__details .btn-export:hover {
+      text-decoration: underline; }
+  #sensor__details .btn-export {
+    margin-top: 7px; }
+  #sensor__details .btn-export:before {
+    content: '\21E5';
+    position: absolute;
+    font-size: 1.7em;
+    vertical-align: middle;
+    transform: rotate(90deg);
+    display: inline-block;
+    left: 2px;
+    top: -5px; }
+  #sensor__details .sensor__info {
+    padding-top: 10px; }
+    #sensor__details .sensor__info:hover {
+      cursor: pointer; }
+  #sensor__details .accord-row .priority-tag {
+    margin: 0 2em 0 1em; }
+  #sensor__details .sensor__title {
+    font-weight: 400;
+    font-size: 1.3em; }
+  #sensor__details .sensors__description {
+    font-weight: 400; }
+  #sensor__details .sensor__reading {
+    font-family: "Courier New", Helvetica, arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #666;
+    float: left;
+    margin-left: 1em; }
+    @media (min-width: 950px) {
+      #sensor__details .sensor__reading {
+        float: right; } }
+  #sensor__details .sensors__metadata-row {
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: 0.5s linear max-height;
+    transition: 0.5s linear max-height;
+    padding: 0 1em; }
+    #sensor__details .sensors__metadata-row.active {
+      max-height: 1000px; }
+      @media (min-width: 47.938em) {
+        #sensor__details .sensors__metadata-row.active {
+          max-height: 1000px; } }
+      @media (min-width: 64em) {
+        #sensor__details .sensors__metadata-row.active {
+          max-height: 1000px; } }
+  #sensor__details .sensors__related {
+    width: 100%; }
+  #sensor__details .sensors__related-label {
+    font-weight: 700;
+    margin-right: 1.2em;
+    padding-top: .3em; }
+  #sensor__details .sensors__related-item {
+    margin-right: 1em;
+    padding-top: .3em;
+    display: inline-block;
+    float: left;
+    clear: both; }
+  #sensor__details .sensors__icon {
     width: 20px;
     height: 20px;
     font-weight: normal;

@@ -61,3 +61,31 @@
 .event__low {
   background: lighten($lightbg__primary, 30%);
 }
+
+// Priority tags
+.priority-tag {
+  color: $white;
+  font-size: .8em;
+  text-transform: uppercase;
+  padding: 2px 2em;
+  font-weight: 700;
+  line-height: inherit;
+  min-width: 103px;
+  text-align: center;
+
+  &.high-priority {
+    background: $error-color;
+
+  }
+  &.med-priority {
+    background: $alert__warning;
+
+  }
+  &.low-priority {
+    background: $lightbg__primary;
+  }
+  &.event-resolved {
+    background: $purple;
+    padding: 2px 1em;
+  }
+}
