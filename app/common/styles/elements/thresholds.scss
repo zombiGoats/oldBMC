@@ -1,12 +1,12 @@
 // Thresholds graph
 
-$threshColorLighten: 20%;
+$threshColorLighten: 5%;
 
 .threshold-chart {
   position: relative;
   line-height: 0;
-  padding: .8em 1em 2em;
-  overflow: visible;
+  padding: .8em 1em 2em 1em;
+  margin: 0 auto;
   @include mediaQuery(medium) {
     max-width: 70%;
   }
@@ -26,7 +26,7 @@ $threshColorLighten: 20%;
       color: $black;
       padding: 3px 6px;
       font-weight: 400;
-      font-size: 1.3em;
+      font-size: 1em;
     }
   }
   .threshold {

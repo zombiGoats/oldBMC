@@ -39,8 +39,61 @@
     color: $lightbg__primary;
     font-size: .9em;
     font-weight: 700;
+    border: 0;
   }
 
+  .content__search {
+    @include mediaQuery(x-large) {
+      max-width: 70.4%;
+      @include fastTransition-all;
+    }
+  }
+}
+
+#event-filter {
+  .filter-label {
+    color: darken($lightgrey, 10%);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .75em;
+    margin-bottom: 3px;
+
+  }
+  .event__severity-filter {
+    margin-right: 2em;
+    margin-bottom: 1em;
+    button {
+      margin: 3px -3px;
+      padding: .6em 2em;
+      min-height: 2.1em;
+      font-size: .9em;
+      font-weight: 700;
+      border-radius: 0;
+      &.first,
+      &.last {
+        border-radius: 3px;
+      }
+      &.last {
+        border-left: 0;
+      }
+    }
+    .btn-primary {
+      border: 2px solid $primebtn__bg;
+    }
+
+  }
+  .event__date-filter {
+    margin-right: 1.5em;
+    color: $darkgrey;
+    input {
+      width: 170px;
+      height: 2.1rem;
+    }
+    label {
+      height: 0;
+      text-indent: -999px;
+    }
+  }
 }
 
 .event-log__filters {

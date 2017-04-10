@@ -2101,79 +2101,6 @@ input.toggle-switch__round-flat:checked + label:after {
   .power__confirm-buttons {
     float: right; } }
 
-.tag {
-  font-size: .9em;
-  padding: .4em .8em .2em;
-  position: relative;
-  display: inline-block;
-  font-weight: 700;
-  padding-right: 60px;
-  border-radius: 3px;
-  line-height: 1.5;
-  overflow: hidden;
-  margin: .4em .3em;
-  min-width: 185px;
-  text-align: left; }
-  .tag:hover {
-    cursor: pointer; }
-  .tag:before {
-    content: '+';
-    font-size: 2em;
-    font-weight: 400;
-    transform: rotate(45deg);
-    display: inline-block;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    margin-top: -18px;
-    color: #666;
-    height: 20px;
-    width: 20px; }
-  .tag:after {
-    content: '';
-    height: 100%;
-    position: absolute;
-    top: 0;
-    right: 40px;
-    border-left: 1px solid #ffffff; }
-
-.tag.custom {
-  background: #bdcce4; }
-
-.event__resolved {
-  background: #e2ddf5; }
-
-.event__unresolved {
-  background: #e2ddf5; }
-
-.event__high {
-  background: #f6adae; }
-
-.event__medium {
-  background: #ffcc99; }
-
-.event__low {
-  background: #cad7fb; }
-
-.priority-tag {
-  color: #ffffff;
-  font-size: .8em;
-  text-transform: uppercase;
-  padding: 2px 2em;
-  font-weight: 700;
-  line-height: inherit;
-  min-width: 103px;
-  text-align: center; }
-  .priority-tag.high-priority {
-    background: #e62425; }
-  .priority-tag.med-priority {
-    background: #ff7f00; }
-  .priority-tag.low-priority {
-    background: #3c6df0; }
-  .priority-tag.event-resolved {
-    background: #5A3EC8;
-    padding: 2px 1em; }
-
 .inline__confirm {
   position: absolute;
   top: 0;
@@ -2267,15 +2194,11 @@ input.toggle-switch__round-flat:checked + label:after {
   position: relative;
   margin-right: 1em;
   margin-top: .5em; }
-  @media (min-width: 1333px) {
-    .content__search {
-      max-width: 60%;
-      margin-top: 0; } }
   .content__search #content__search-input {
     margin: 0;
-    border: 0;
-    border-bottom: 2px solid #ccc;
-    padding-left: 40px; }
+    border: 1px solid #ccc;
+    padding-left: 40px;
+    padding-right: 5px; }
     .content__search #content__search-input:focus {
       box-shadow: none; }
   .content__search label {
@@ -2288,15 +2211,18 @@ input.toggle-switch__round-flat:checked + label:after {
     transform: translateY(-50%);
     background: url("../assets/images/icon-search.svg") center center no-repeat;
     opacity: .6; }
-  .content__search #event__search-submit {
+  .content__search #content__search-submit {
     position: absolute;
+    display: inline-block;
+    width: 100px;
     top: .5em;
-    right: 0;
-    padding: 8px;
+    right: 5px;
+    padding: 1em 2em;
     min-height: 20px;
-    max-width: 70px;
     text-align: center;
-    margin: 0; }
+    margin: 0;
+    font-weight: 700;
+    font-size: .8em; }
   .content__search .tag-filter-label {
     text-transform: uppercase;
     color: #666;
@@ -2441,8 +2367,8 @@ input.toggle-switch__round-flat:checked + label:after {
 .threshold-chart {
   position: relative;
   line-height: 0;
-  padding: .8em 1em 2em;
-  overflow: visible; }
+  padding: .8em 1em 2em 1em;
+  margin: 0 auto; }
   @media (min-width: 64em) {
     .threshold-chart {
       max-width: 70%; } }
@@ -2462,7 +2388,7 @@ input.toggle-switch__round-flat:checked + label:after {
       color: #333;
       padding: 3px 6px;
       font-weight: 400;
-      font-size: 1.3em; }
+      font-size: 1em; }
   .threshold-chart .threshold {
     display: inline-block;
     background-color: #cbddeb;
@@ -2470,24 +2396,25 @@ input.toggle-switch__round-flat:checked + label:after {
     min-height: 25px;
     margin: 0 -3px; }
     .threshold-chart .threshold.thresh__low-critical {
-      background-color: #f07f80; }
+      background-color: #e93a3c; }
     .threshold-chart .threshold.thresh__low-warn {
-      background-color: #ffb266; }
+      background-color: #ff8c1a; }
     .threshold-chart .threshold.thresh__normal {
       min-width: 60%; }
     .threshold-chart .threshold.thresh__high-warn {
-      background-color: #ffb266; }
+      background-color: #ff8c1a; }
     .threshold-chart .threshold.thresh__high-critical {
-      background-color: #f07f80; }
+      background-color: #e93a3c; }
 
 .dropdown__button {
   position: relative;
-  padding: 1em;
-  margin-top: -10px; }
+  padding: .5em .8em;
+  margin-top: -10px;
+  border: 1px solid #ccc; }
   .dropdown__button.active, .dropdown__button:hover {
     background: #e6e9ee; }
   .dropdown__button:after {
-    content: '\276F';
+    content: '\25B8';
     display: inline-block;
     margin-left: 5px;
     font-size: .8em;
@@ -2496,8 +2423,7 @@ input.toggle-switch__round-flat:checked + label:after {
 
 .dropdown__wrapper {
   position: relative;
-  display: inline-block;
-  float: left; }
+  display: inline-block; }
 
 .dropdown__list {
   position: absolute;
@@ -3136,7 +3062,47 @@ section.row {
   text-transform: uppercase;
   color: #3c6df0;
   font-size: .9em;
-  font-weight: 700; }
+  font-weight: 700;
+  border: 0; }
+
+@media (min-width: 100em) {
+  #event-log .content__search {
+    max-width: 70.4%;
+    transition: all .5s ease; } }
+
+#event-filter .filter-label {
+  color: #b3b3b3;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .75em;
+  margin-bottom: 3px; }
+
+#event-filter .event__severity-filter {
+  margin-right: 2em;
+  margin-bottom: 1em; }
+  #event-filter .event__severity-filter button {
+    margin: 3px -3px;
+    padding: .6em 2em;
+    min-height: 2.1em;
+    font-size: .9em;
+    font-weight: 700;
+    border-radius: 0; }
+    #event-filter .event__severity-filter button.first, #event-filter .event__severity-filter button.last {
+      border-radius: 3px; }
+    #event-filter .event__severity-filter button.last {
+      border-left: 0; }
+  #event-filter .event__severity-filter .btn-primary {
+    border: 2px solid #3c6df0; }
+
+#event-filter .event__date-filter {
+  margin-right: 1.5em;
+  color: #666; }
+  #event-filter .event__date-filter input {
+    width: 170px;
+    height: 2.1rem; }
+  #event-filter .event__date-filter label {
+    height: 0;
+    text-indent: -999px; }
 
 .event-log__filters {
   position: relative;
