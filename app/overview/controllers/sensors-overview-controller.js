@@ -12,7 +12,7 @@ window.angular && (function (angular) {
 
     angular
         .module('app.overview')
-        .controller('sensorsController', [
+        .controller('sensorsOverviewController', [
             '$scope', 
             '$window', 
             'APIUtils', 
@@ -20,7 +20,15 @@ window.angular && (function (angular) {
             function($scope, $window, APIUtils, dataService, userModel){
                 $scope.dataService = dataService;
 
-                $scope.dropdown_selected = false;
+                $scope.sensorCategories = [
+                    "All Sensors",
+                    "Temperature",
+                    "Fan Speed",
+                    "Altitude",
+                    "Voltage",
+                    "Current",
+                    "Power"
+                ]
             }
         ]
     );

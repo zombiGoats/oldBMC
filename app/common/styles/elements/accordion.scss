@@ -55,4 +55,7 @@
   &:hover {
     background: $white;
   }
+  &:last-child {
+    border-bottom: 1px solid $lightgrey;
+  }
 }

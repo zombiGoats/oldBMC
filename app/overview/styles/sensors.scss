@@ -1,26 +1,88 @@
-// Event Log SCSS
-#sensors {
-  #sensors__detail {
-    display: block;
-    margin-top: 1.6em;
-    border-top: 1px solid $lightgrey;
+//Sensor categories
+#sensor-categories {
+  margin-top: 2em;
+}
+
+#sensors-overview {
+  .sensor__category {
     position: relative;
-    overflow: hidden;
+    display: block;
+    margin: .5em 0;
+    font-weight: 400;
+    background: $lightblue;
+    padding: 1em 2em 1em 2em;
+    text-decoration: none;
+    border: 1px solid $lightgrey;
+    border-left: 0;
+    border-right: 0;
+    &:hover {
+      background: $white;
+      color: $black;
+      @include fastTransition-all;
+    }
+    @include fastTransition-all;
+    @include mediaQuery(x-large) {
+      max-width: 60%;
+      @include fastTransition-all;
+    }
+    .priority-tag {
+      margin-left: 0;
+      text-indent: -9999px;
+      width: 1.5em;
+      min-width: 0;
+      padding: 0;
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: 0;
+    }
+    &.high-priority {
+      color: $error-color;
+    }
+    &.med-priority {
+      color: $alert__warning;
+    }
+  }
+}
+// Sensors
+
+#sensors,#sensors-overview {
+  .content__search {
+    max-width: 60%;
   }
 }
 
-//end sensors
-
-
+#back-link {
+  margin: 1em 0 0;
+  a {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding-left: 1em;
+    &:before {
+      content:'\2039';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-56%);
+      display: inline-block;
+      margin-right: 3px;
+      font-size: 2em;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
 
 #sensor__details {
   display: block;
-  margin-top: 1.6em;
+  margin-top: .6em;
   border-top: 1px solid $lightgrey;
   position: relative;
   overflow: hidden;
 
-
+  .header__ac
   //Export log
   .btn-export {
     text-transform: capitalize;
@@ -49,7 +111,6 @@
 
   .sensor__info {
     padding-top: 10px;
-
     &:hover {
       cursor: pointer;
     }
@@ -70,7 +131,6 @@
     font-weight: 400;
   }
 
-  //Event ID
   .sensor__reading {
     @include fontCourierBold;
     font-size: 1.2em;
@@ -82,7 +142,7 @@
     }
   }
 
-  // Event metadata row
+  // Sensor metadata row
   .sensors__metadata-row {
     max-height: 0;
     overflow: hidden;
@@ -98,10 +158,26 @@
         max-height: 1000px;
       }
     }
+
+    .threshold-chart {
+      position: relative;
+      .threshold__label {
+        position: absolute;
+        top: 38%;
+        transform: translateY(-50%);
+        font-weight: 700;
+        &.low {
+          margin-left: -40px;
+        }
+        &.high {
+          margin-left: 5px;
+        }
+      }
+    }
+
   }
 
-
-  //Event Related Items
+  //Sensor Related Items
   .sensors__related {
     width: 100%;
   }
@@ -130,4 +206,6 @@
 
 }
 
-//end sensors
+//end sensor details
+
+
