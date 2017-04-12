@@ -1999,6 +1999,29 @@ input.toggle-switch__round-flat:checked + label:after {
   margin-left: 20px;
   background-color: #3c6df0; }
 
+.toggle-filter {
+  margin-right: 2em;
+  margin-bottom: 1em; }
+  .toggle-filter .filter-label {
+    color: #b3b3b3;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: .75em;
+    margin-bottom: 3px; }
+  .toggle-filter button {
+    margin: 3px -3px;
+    padding: .6em 2em;
+    min-height: 2.1em;
+    font-size: .9em;
+    font-weight: 700;
+    border-radius: 0; }
+    .toggle-filter button.first, .toggle-filter button.last {
+      border-radius: 3px; }
+    .toggle-filter button.last {
+      border-left: 0; }
+  .toggle-filter .btn-primary {
+    border: 2px solid #3c6df0; }
+
 .status-light__disabled {
   color: #666; }
   .status-light__disabled::before {
@@ -2174,6 +2197,41 @@ input.toggle-switch__round-flat:checked + label:after {
     background: #5A3EC8;
     padding: 2px 1em; }
 
+.priority-tag-circ {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(0, 186, 161, 0.4);
+  position: relative;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #00baa1; }
+  .priority-tag-circ.high-priority {
+    color: #e62325;
+    background-color: rgba(230, 35, 37, 0.4);
+    background-image: url(/assets/images/crit-x.svg);
+    border-color: #e62325; }
+    .priority-tag-circ.high-priority:before {
+      content: '';
+      position: absolute;
+      top: -11px;
+      left: -3px;
+      font-weight: 600;
+      font-size: 1.5em;
+      -webkit-font-smoothing: antialiased;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004); }
+  .priority-tag-circ.medium-priority {
+    background: rgba(220, 38, 127, 0.5);
+    border-color: #dc267f; }
+  .priority-tag-circ.warn-priority {
+    background: rgba(255, 127, 0, 0.5);
+    border-color: #ff7f00; }
+  .priority-tag-circ.normal-priority {
+    background: rgba(0, 186, 161, 0.4); }
+  .priority-tag-circ.event-resolved {
+    background: #5A3EC8;
+    padding: 2px 1em; }
+
 .inline__confirm {
   position: absolute;
   top: 0;
@@ -2220,7 +2278,8 @@ input.toggle-switch__round-flat:checked + label:after {
 #header__actions-bar {
   padding-top: 1em;
   padding-right: 1em;
-  background: #d7dbe0;
+  background: #20214f;
+  color: #ffffff;
   margin-left: 0; }
   #header__actions-bar .event__actions {
     margin-top: 1em;
@@ -2268,7 +2327,8 @@ input.toggle-switch__round-flat:checked + label:after {
   display: inline-block;
   position: relative;
   margin-right: 1em;
-  margin-top: .5em; }
+  margin-top: .5em;
+  margin-bottom: 1em; }
   .content__search #content__search-input {
     margin: 0;
     border: 1px solid #ccc;
@@ -2466,11 +2526,10 @@ input.toggle-switch__round-flat:checked + label:after {
 .threshold-chart {
   position: relative;
   line-height: 0;
-  padding: .8em 1em 2em 1em;
-  margin: 0 auto; }
-  @media (min-width: 64em) {
+  padding: .8em 2em 2em 2.5em; }
+  @media (min-width: 85.375em) {
     .threshold-chart {
-      max-width: 70%; } }
+      max-width: 1000px; } }
   .threshold-chart .threshold__marker {
     position: absolute;
     top: 0;
@@ -2895,10 +2954,6 @@ header {
       margin-left: 360px;
       padding: 1rem 2rem; } }
 
-section.row {
-  padding-left: 0;
-  padding-right: 0; }
-
 #nav__top-level {
   background: #1a273b;
   height: 100%;
@@ -3212,12 +3267,21 @@ section.row {
       float: right;
       display: inline-block; } }
 
+#event-log__events.row {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: .5em; }
+
 #event-log__events {
   display: block;
   margin-top: 1.6em;
   border-top: 1px solid #ccc;
   position: relative;
   overflow: hidden; }
+  #event-log__events #header__actions-bar .btn-export,
+  #event-log__events #header__actions-bar .btn-delete,
+  #event-log__events #header__actions-bar .btn-resolve {
+    color: #ffffff; }
   #event-log__events .inline__confirm {
     height: auto;
     margin-left: 0;
@@ -3244,7 +3308,7 @@ section.row {
   #event-log__events .btn-delete,
   #event-log__events .btn-resolve {
     text-transform: capitalize;
-    color: #333;
+    color: black;
     font-size: .9em;
     font-weight: 700;
     position: relative;
@@ -3381,37 +3445,32 @@ section.row {
   margin: .5em 0;
   font-weight: 400;
   background: #f0f2f5;
-  padding: 1em 2em 1em 2em;
+  padding: 1em 2em 1em 3.7em;
   text-decoration: none;
   border: 1px solid #ccc;
   border-left: 0;
-  border-right: 0;
-  transition: all .5s ease; }
+  border-right: 0; }
   #sensors-overview .sensor__category:hover {
     background: #ffffff;
-    color: #333;
-    transition: all .5s ease; }
+    color: #333; }
   @media (min-width: 100em) {
     #sensors-overview .sensor__category {
-      max-width: 60%;
-      transition: all .5s ease; } }
-  #sensors-overview .sensor__category .priority-tag {
-    margin-left: 0;
-    text-indent: -9999px;
-    width: 1.5em;
-    min-width: 0;
-    padding: 0;
-    position: absolute;
-    bottom: 0;
-    top: 0;
-    left: 0; }
-  #sensors-overview .sensor__category.high-priority {
-    color: #e62425; }
-  #sensors-overview .sensor__category.med-priority {
-    color: #ff7f00; }
+      max-width: 60%; } }
+
+#sensors-overview .priority-tag-circ {
+  position: absolute;
+  top: 50%;
+  left: 1.2em;
+  transform: translateY(-50%); }
+
+#sensors .accord-row, #sensors-overview .accord-row {
+  padding-left: 3.7em; }
 
 #sensors .content__search, #sensors-overview .content__search {
-  max-width: 60%; }
+  max-width: 100%; }
+  @media (min-width: 100em) {
+    #sensors .content__search, #sensors-overview .content__search {
+      max-width: 60%; } }
 
 #back-link {
   margin: 1em 0 0; }
@@ -3419,9 +3478,10 @@ section.row {
     text-decoration: none;
     position: relative;
     display: inline-block;
-    padding-left: 1em; }
+    padding-left: 1em;
+    font-weight: 700; }
     #back-link a:before {
-      content: '\2039';
+      content: '\27E8';
       position: absolute;
       top: 50%;
       left: 0;
@@ -3435,19 +3495,31 @@ section.row {
 #sensor__details {
   display: block;
   margin-top: .6em;
-  border-top: 1px solid #ccc;
   position: relative;
   overflow: hidden; }
-  #sensor__details .header__ac
-.btn-export {
+  #sensor__details #header__actions-bar {
+    position: relative;
+    padding: 1em 3.7em; }
+    #sensor__details #header__actions-bar .priority-tag-circ {
+      position: absolute;
+      left: 1.2em;
+      top: 50%;
+      transform: translateY(-50%); }
+      #sensor__details #header__actions-bar .priority-tag-circ.high-priority {
+        background-color: rgba(255, 92, 73, 0.3); }
+    #sensor__details #header__actions-bar .sensor__category {
+      margin: 0;
+      font-size: 1.5em;
+      font-weight: 700;
+      color: #ffffff; }
+  #sensor__details .btn-export {
     text-transform: capitalize;
     color: #333;
     font-size: .9em;
     font-weight: 700;
     position: relative;
     padding: 0 0 1em 2em; }
-    #sensor__details .header__ac
-.btn-export:hover {
+    #sensor__details .btn-export:hover {
       text-decoration: underline; }
   #sensor__details .btn-export {
     margin-top: 7px; }
@@ -3464,11 +3536,14 @@ section.row {
     padding-top: 10px; }
     #sensor__details .sensor__info:hover {
       cursor: pointer; }
-  #sensor__details .accord-row .priority-tag {
-    margin: 0 2em 0 1em; }
+  #sensor__details .accord-row .priority-tag-circ {
+    position: absolute;
+    top: 28px;
+    left: 1.2em; }
   #sensor__details .sensor__title {
-    font-weight: 400;
-    font-size: 1.3em; }
+    font-weight: 700;
+    font-size: 1.1em;
+    max-width: 78%; }
   #sensor__details .sensors__description {
     font-weight: 400; }
   #sensor__details .sensor__reading {
@@ -3476,17 +3551,15 @@ section.row {
     font-weight: 700;
     font-size: 1.2em;
     color: #666;
-    float: left;
-    margin-left: 1em; }
-    @media (min-width: 950px) {
-      #sensor__details .sensor__reading {
-        float: right; } }
+    float: right;
+    margin-left: 1em;
+    max-width: 18%; }
   #sensor__details .sensors__metadata-row {
     max-height: 0;
     overflow: hidden;
     -webkit-transition: 0.5s linear max-height;
     transition: 0.5s linear max-height;
-    padding: 0 1em; }
+    padding: 0; }
     #sensor__details .sensors__metadata-row.active {
       max-height: 1000px; }
       @media (min-width: 47.938em) {

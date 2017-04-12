@@ -57,7 +57,6 @@
     font-weight: 700;
     font-size: .75em;
     margin-bottom: 3px;
-
   }
   .event__severity-filter {
     margin-right: 2em;
@@ -108,6 +107,11 @@
 }
 
 // Event Log Events
+#event-log__events.row {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: .5em;
+}
 #event-log__events {
   display: block;
   margin-top: 1.6em;
@@ -115,6 +119,13 @@
   position: relative;
   overflow: hidden;
 
+  #header__actions-bar {
+    .btn-export,
+    .btn-delete,
+    .btn-resolve {
+      color: $white;
+    }
+  }
   .inline__confirm {
     height: auto;
     margin-left: 0;
@@ -152,7 +163,7 @@
   .btn-delete,
   .btn-resolve {
     text-transform: capitalize;
-    color: $black;
+    color: black;
     font-size: .9em;
     font-weight: 700;
     position: relative;
