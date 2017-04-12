@@ -47,14 +47,14 @@
   position: relative;
   border-top: 1px solid $lightgrey;
   padding: 1em 1em 1em 0em;
-  background: $lightblue;
+  background: $white;
   overflow: hidden;
   &.active,
   &.selected {
-    background: $white;
+    background: $lightblue;
   }
   &:hover {
-    background: $white;
+    background: $lightblue;
   }
   &:last-child {
     border-bottom: 1px solid $lightgrey;
