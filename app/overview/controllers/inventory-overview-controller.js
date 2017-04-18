@@ -12,16 +12,13 @@ window.angular && (function (angular) {
 
     angular
         .module('app.overview')
-        .controller('sensorsController', [
-            '$scope',
-            '$log',
+        .controller('inventoryOverviewController', [
+            '$scope', 
             '$window', 
             'APIUtils', 
             'dataService',
-            function($scope, $log, $window, APIUtils, dataService, userModel){
+            function($scope, $window, APIUtils, dataService, userModel){
                 $scope.dataService = dataService;
-
-                $scope.dropdown_selected = false;
 
             }
         ]

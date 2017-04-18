@@ -1,26 +1,48 @@
-//Sensor categories
-#sensor-categories {
-  margin-top: 2em;
+
+@mixin state-label {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .8em;
+}
+
+$title-minWidth: 210px;
+
+.sensor__heading {
+  font-weight: 700;
+  &.middle,
+  &.right {
+    display: none;
+    @media (min-width: 950px) {
+      display: inline-block;
+    }
+  }
+}
+
+.sensor__critical-label {
+  color: $thresh-critical;
+  @include state-label;
+}
+.sensor__warning-label {
+  color: $thresh-warning;
+  @include state-label;
 }
 
 #sensors-overview {
-  .sensor__category {
+  .sensor__group {
     position: relative;
     display: block;
     margin: .5em 0;
-    font-weight: 400;
-    background: $lightblue;
-    padding: 1em 2em 1em 3.7em;
+    background: $white;
+    padding: 1.5em 6em 1.5em 3.7em;
     text-decoration: none;
     border: 1px solid $lightgrey;
-    border-left: 0;
-    border-right: 0;
+    font-weight: 700;
     &:hover {
-      background: $white;
+      background: $lightblue;
       color: $black;
     }
     @include mediaQuery(x-large) {
-      max-width: 60%;
+      //max-width: 60%;
     }
   }
   .priority-tag-circ {
@@ -29,6 +51,10 @@
     left: 1.2em;
     transform: translateY(-50%);
   }
+  .header__actions-bar {
+    padding-left: 3.5em;
+    padding-right: 7.3em;
+  }
 }
 
 // Sensors
@@ -36,12 +62,17 @@
 #sensors, #sensors-overview {
   .accord-row {
     padding-left: 3.7em;
+    padding-right: 1em;
   }
   .content__search {
     max-width: 100%;
-    @include mediaQuery(x-large) {
-      max-width: 60%;
+    @media(min-width: 1300px) {
+      max-width: 50%;
     }
+  }
+  .toggle-filter {
+    display: inline-block;
+    margin-right: 0;
   }
 }
 
@@ -77,9 +108,10 @@
   position: relative;
   overflow: hidden;
 
-  #header__actions-bar {
+  .header__actions-bar {
     position: relative;
-    padding: 1em 3.7em;
+    padding: 1em 35px 0 3.7em;
+
     .priority-tag-circ {
       position: absolute;
       left: 1.2em;
@@ -91,10 +123,12 @@
     }
     .sensor__category {
       margin: 0;
-      font-size: 1.5em;
-      font-weight: 700;
       color: $white;
+      min-width: $title-minWidth;
     }
+  }
+  .header-row {
+    background: $darkpurple;
   }
 
   //Export log
@@ -144,7 +178,9 @@
   .sensor__title {
     font-weight: 700;
     font-size: 1.1em;
+    min-width: $title-minWidth;
     max-width: 78%;
+    vertical-align: top;
   }
   .sensors__description {
     font-weight: 400;
@@ -153,9 +189,7 @@
   .sensor__reading {
     @include fontCourierBold;
     font-size: 1.2em;
-    color: $darkgrey;
-    float: right;
-    margin-left: 1em;
+    color: $black;
     max-width: 18%;
   }
 
@@ -166,6 +200,10 @@
     -webkit-transition: 0.5s linear max-height;
     transition: 0.5s linear max-height;
     padding: 0;
+    @include  fastTransition-all;
+    @include mediaQuery(large) {
+      margin-left: 200px;
+    }
     &.active {
       max-height: 1000px; //max-height used to allow flexible height of content and still allow transition
       @include mediaQuery(small) {
@@ -175,23 +213,6 @@
         max-height: 1000px;
       }
     }
-
-    .threshold-chart {
-      position: relative;
-      .threshold__label {
-        position: absolute;
-        top: 38%;
-        transform: translateY(-50%);
-        font-weight: 700;
-        &.low {
-          margin-left: -40px;
-        }
-        &.high {
-          margin-left: 5px;
-        }
-      }
-    }
-
   }
 
   //Sensor Related Items

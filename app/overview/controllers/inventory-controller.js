@@ -12,7 +12,7 @@ window.angular && (function (angular) {
 
     angular
         .module('app.overview')
-        .controller('sensorsController', [
+        .controller('inventoryController', [
             '$scope',
             '$log',
             '$window', 

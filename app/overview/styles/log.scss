@@ -21,10 +21,6 @@
       color: $darkbg__accent;
     }
   }
-  .row {
-    //padding: 0;
-    margin-left: 0;
-  }
 
   // Dropwdowns filter
   .dropdown__date.row {
@@ -44,7 +40,7 @@
 
   .content__search {
     @include mediaQuery(x-large) {
-      max-width: 70.4%;
+      max-width: 61%;
       @include fastTransition-all;
     }
   }
@@ -110,7 +106,6 @@
 #event-log__events.row {
   padding-left: 0;
   padding-right: 0;
-  margin-left: .5em;
 }
 #event-log__events {
   display: block;
@@ -119,7 +114,7 @@
   position: relative;
   overflow: hidden;
 
-  #header__actions-bar {
+  .header__actions-bar {
     .btn-export,
     .btn-delete,
     .btn-resolve {
@@ -195,10 +190,8 @@
 
   // Single event log card
   .event-log__single-event {
-
     border-top: 1px solid $lightgrey;
-    padding: 1em 1em 1em 0em;
-
+    padding: 1em 1em 1em .7em;
   }
 
   .event-log__event-info {

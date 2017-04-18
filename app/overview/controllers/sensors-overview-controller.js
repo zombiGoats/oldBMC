@@ -19,16 +19,6 @@ window.angular && (function (angular) {
             'dataService',
             function($scope, $window, APIUtils, dataService, userModel){
                 $scope.dataService = dataService;
-
-                $scope.sensorCategories = [
-                    "All Sensors",
-                    "Temperature",
-                    "Fan Speed",
-                    "Altitude",
-                    "Voltage",
-                    "Current",
-                    "Power"
-                ]
             }
         ]
     );

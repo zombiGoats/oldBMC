@@ -8,6 +8,7 @@
             <button class="inline btn-export float-right">Export</button>
         </div>
     </section>
+
     <!-- Filters -->
     <section class="row column">
         <!-- search -->
@@ -17,8 +18,7 @@
             <input id="content__search-submit" type="submit" class="btn btn-secondary" value="Submit"/>
         </div>
         <div class="toggle-filter">
-            <button class="inline first" ng-click="toggleall = !toggleall"
-                    ng-class="toggleall ? 'btn-primary' : 'btn-secondary'">All
+            <button class="inline first btn-primary">All
             </button>
             <button class="inline " ng-click="togglehigh = !togglehigh"
                     ng-class="togglehigh ? 'btn-primary' : 'btn-secondary'">Critical
@@ -31,51 +31,58 @@
             </button>
         </div>
     </section> <!-- end filter -->
+
     <section class="row column">
     <div id="back-link">
         <a href="#/overview/sensors-overview">Back to Sensor Overview</a>
     </div>
     </section>
+
     <section id="sensor__details" class="row column">
-        <div id="header__actions-bar">
-            <p class="inline priority-tag-circ high-priority" aria-label="High Priority"></p>
-            <h3 class="inline sensor__category">Fan speed sensors<span class="h5"> (RPMs)</span></h3>
+        <div class="row column header-row">
+            <div class="column small-10 large-11 header__actions-bar">
+                <p class="inline priority-tag-circ high-priority" aria-label="High Priority"></p>
+                <p class="inline sensor__heading sensor__category">Fan speed (RPMs)</p>
+                <p class="inline sensor__heading middle">Reading</p>
+                <p class="inline float-right sensor__heading right">State</p>
+            </div>
+            <div class="column small-2 large-1 sensor__heading trigger-col"></div>
         </div>
 
         <!-- Sensor -->
-        <div class="row column accord-row"
-             ng-class="{'active': sensors__metadatarow, 'selected': sensors__selected}">
+        <div class="row column accord-row" ng-class="{'active': sensors__metadatarow, 'selected': sensors__selected}">
             <div class="row">
-                <div class="column small-10 large-11 sensor__info"
-                     ng-click="sensors__metadatarow = ! sensors__metadatarow">
+                <div class="column small-10 large-11 sensor__info" ng-click="sensors__metadatarow = ! sensors__metadatarow">
                     <p class="inline priority-tag-circ high-priority" aria-label="High Priority"></p>
                     <p class="inline sensor__title">Fan Speed 1</p>
-                    <p class="inline sensor__reading float-right">6200 <span>rpms</span></p>
+                    <p class="inline sensor__reading">6200 <span>rpms</span></p>
+                    <p class="inline float-right sensor__critical-label">Critical</p>
                 </div>
                 <div class="column small-2 large-1">
-                    <button class="accord-trigger" ng-class="{'active': sensors__metadatarow}"
-                            ng-click="sensors__metadatarow = ! sensors__metadatarow"></button>
+                    <button class="accord-trigger" ng-class="{'active': sensors__metadatarow}" ng-click="sensors__metadatarow = ! sensors__metadatarow"></button>
                 </div>
             </div>
             <div class="row sensors__metadata-row" ng-class="{'active': sensors__metadatarow}">
                 <div class="column small-12">
-                    <div class="threshold-chart">
+                    <div class="threshold-chart__wrapper">
                         <span class="threshold__label low">Low</span>
-                        <span class="threshold__marker" style="left: 90%;"><p class="threshold__value">6200</p></span>
-                        <span class="threshold thresh__low-critical"></span>
-                        <span class="threshold thresh__low-warn"></span>
-                        <span class="threshold thresh__normal"></span>
-                        <span class="threshold thresh__high-warn"></span>
-                        <span class="threshold thresh__high-critical"></span>
+                        <div class="threshold-chart">
+                            <span class="threshold__marker thresh__high-critical" style="left: 90%;"><span class="threshold__value">6200 RPMs</span></span>
+                            <span class="threshold thresh__low-critical"></span>
+                            <span class="threshold thresh__low-warn"></span>
+                            <span class="threshold thresh__normal"></span>
+                            <span class="threshold thresh__high-warn"></span>
+                            <span class="threshold thresh__high-critical"></span>
+                        </div>
                         <span class="threshold__label high">High</span>
                     </div>
                 </div>
 
-                <div class="column small-6">
+                <div class="column small-12 large-6">
                     <p class="h5 content-header">Associated Events</p>
                     <a href="#/overview/log">View 5 events related to Fan 1</a>
                 </div>
-                <div class="column small-6">
+                <div class="column small-12 large-6">
                     <p class="h5 content-header">Associated Hardware</p>
                     <a href="">Chassis0</a>
                 </div>
@@ -83,45 +90,84 @@
         </div>
 
         <!-- Sensor -->
-        <div class="row column accord-row"
-             ng-class="{'active': sensors__metadatarow2, 'selected': sensors__selected}">
+        <div class="row column accord-row" ng-class="{'active': sensors__metadatarow2, 'selected': sensors__selected}">
             <div class="row">
-                <div class="column small-10 large-11 sensor__info"
-                     ng-click="sensors__metadatarow2 = ! sensors__metadatarow2">
+                <div class="column small-10 large-11 sensor__info" ng-click="sensors__metadatarow2 = ! sensors__metadatarow2">
                     <p class="inline priority-tag-circ normal-priority" aria-label="Normal Priority"></p>
                     <p class="inline sensor__title">Fan Speed 2</p>
-                    <p class="inline sensor__reading float-right">4600 <span>rpms</span></p>
+                    <p class="inline sensor__reading">4600 <span>rpms</span></p>
                 </div>
                 <div class="column small-2 large-1">
-                    <button class="accord-trigger" ng-class="{'active': sensors__metadatarow2}"
-                            ng-click="sensors__metadatarow2 = ! sensors__metadatarow2"></button>
+                    <button class="accord-trigger" ng-class="{'active': sensors__metadatarow2}" ng-click="sensors__metadatarow2 = ! sensors__metadatarow2"></button>
                 </div>
             </div>
             <div class="row sensors__metadata-row" ng-class="{'active': sensors__metadatarow2}">
                 <div class="column small-12">
-                    <div class="threshold-chart">
+                    <div class="threshold-chart__wrapper">
                         <span class="threshold__label low">Low</span>
-                        <span class="threshold__marker" style="left: 50%"><p class="threshold__value">4600</p></span>
-                        <span class="threshold thresh__low-critical"></span>
-                        <span class="threshold thresh__low-warn"></span>
-                        <span class="threshold thresh__normal"></span>
-                        <span class="threshold thresh__high-warn"></span>
-                        <span class="threshold thresh__high-critical"></span>
+                        <div class="threshold-chart">
+                            <span class="threshold__marker thresh__normal" style="left: 40%;"><span class="threshold__value">4600 RPMs</span></span>
+                            <span class="threshold thresh__low-critical"></span>
+                            <span class="threshold thresh__low-warn"></span>
+                            <span class="threshold thresh__normal"></span>
+                            <span class="threshold thresh__high-warn"></span>
+                            <span class="threshold thresh__high-critical"></span>
+                        </div>
                         <span class="threshold__label high">High</span>
                     </div>
                 </div>
 
-                <div class="column small-6">
+                <div class="column small-12 large-6">
                     <p class="h5 content-header">Associated Events</p>
                     <a href="#/overview/log">View 5 events related to Fan 1</a>
                 </div>
-                <div class="column small-6">
+                <div class="column small-12 large-6">
                     <p class="h5 content-header">Associated Hardware</p>
                     <p>None</p>
                 </div>
             </div>
         </div>
 
+        <!-- Sensor -->
+        <div class="row column accord-row" ng-class="{'active': sensors__metadatarow3, 'selected': sensors__selected}">
+            <div class="row">
+                <div class="column small-10 large-11 sensor__info" ng-click="sensors__metadatarow3 = ! sensors__metadatarow3">
+                    <p class="inline priority-tag-circ warn-priority" aria-label="Medium Priority"></p>
+                    <p class="inline sensor__title">Fan Speed 3</p>
+                    <p class="inline sensor__reading">1200 <span>rpms</span></p>
+                    <p class="inline float-right sensor__warning-label">warning</p>
+                </div>
+                <div class="column small-2 large-1">
+                    <button class="accord-trigger" ng-class="{'active': sensors__metadatarow3}"
+                            ng-click="sensors__metadatarow3 = ! sensors__metadatarow3"></button>
+                </div>
+            </div>
+            <div class="row sensors__metadata-row" ng-class="{'active': sensors__metadatarow3}">
+                <div class="column small-12">
+                    <div class="threshold-chart__wrapper">
+                        <span class="threshold__label low">Low</span>
+                        <div class="threshold-chart">
+                            <span class="threshold__marker thresh__low-warn" style="left: 15%;"><span class="threshold__value">1200 RPMs</span></span>
+                            <span class="threshold thresh__low-critical"></span>
+                            <span class="threshold thresh__low-warn"></span>
+                            <span class="threshold thresh__normal"></span>
+                            <span class="threshold thresh__high-warn"></span>
+                            <span class="threshold thresh__high-critical"></span>
+                        </div>
+                        <span class="threshold__label high">High</span>
+                    </div>
+                </div>
+
+                <div class="column small-12 large-6">
+                    <p class="h5 content-header">Associated Events</p>
+                    <a href="#/overview/log">View 5 events related to Fan 1</a>
+                </div>
+                <div class="column small-12 large-6">
+                    <p class="h5 content-header">Associated Hardware</p>
+                    <a href="">Chassis0</a>
+                </div>
+            </div>
+        </div>
     </section>
     <paginate ng-include="paginate"></paginate>
 </div> <!-- end event log -->
