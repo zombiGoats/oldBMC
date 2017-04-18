@@ -3615,7 +3615,6 @@ header {
     -webkit-transition: 0.5s linear max-height;
     transition: 0.5s linear max-height;
     padding: 0;
-    overflow: visible;
     transition: all .5s ease; }
     @media (min-width: 85.375em) {
       #sensor__details .sensors__metadata-row {
