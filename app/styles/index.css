@@ -2582,6 +2582,9 @@ input.toggle-switch__round-flat:checked + label:after {
       font-weight: 400;
       font-size: 1em;
       white-space: nowrap; }
+  .threshold-chart .threshold__marker.thresh__low-critical .threshold__value {
+    left: 0;
+    transition: all 1.5s ease; }
   .threshold-chart .threshold {
     display: inline-block;
     background-color: #8ee9d4;

@@ -46,7 +46,12 @@ $threshColorLighten: 5%;
       white-space: nowrap;
     }
   }
-
+  .threshold__marker {
+    &.thresh__low-critical .threshold__value {
+      left: 0;
+      @include slowTransition-all;
+    }
+  }
   .threshold {
     display: inline-block;
     background-color: $thresh-normal;
