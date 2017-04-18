@@ -101,7 +101,11 @@ $title-minWidth: 210px;
 
 #inventory, #inventory-overview {
   .inventory__device-col {
-    margin-right: -6px;
+    margin-right: 6px;
+    width: 50%;
+    @include mediaQuery(medium){
+      width: auto;
+    }
   }
   .inventory__function-col {
     @include col-label;

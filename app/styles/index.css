@@ -2545,7 +2545,8 @@ input.toggle-switch__round-flat:checked + label:after {
   top: -5px; }
 
 .threshold-chart__wrapper {
-  position: relative; }
+  position: relative;
+  padding-bottom: 2em; }
   .threshold-chart__wrapper .threshold__label {
     position: absolute;
     top: 38%;
@@ -3715,7 +3716,11 @@ header {
   padding-right: 1em; }
 
 #inventory .inventory__device-col, #inventory-overview .inventory__device-col {
-  margin-right: -6px; }
+  margin-right: 6px;
+  width: 50%; }
+  @media (min-width: 64em) {
+    #inventory .inventory__device-col, #inventory-overview .inventory__device-col {
+      width: auto; } }
 
 #inventory .inventory__function-col, #inventory-overview .inventory__function-col {
   text-transform: uppercase;
