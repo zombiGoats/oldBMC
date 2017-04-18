@@ -2549,7 +2549,7 @@ input.toggle-switch__round-flat:checked + label:after {
   padding-bottom: 2em; }
   .threshold-chart__wrapper .threshold__label {
     position: absolute;
-    top: 38%;
+    top: 25%;
     transform: translateY(-50%);
     font-weight: 700; }
     .threshold-chart__wrapper .threshold__label.low {
