@@ -13,9 +13,9 @@ window.angular && (function (angular) {
                         $scope.selectedSeverity.all = !$scope.selectedSeverity.all;
 
                         if($scope.selectedSeverity.all){
-                            $scope.selectedSeverity.low = true;
-                            $scope.selectedSeverity.medium = true;
-                            $scope.selectedSeverity.high = true;
+                            $scope.selectedSeverity.low = false;
+                            $scope.selectedSeverity.medium = false;
+                            $scope.selectedSeverity.high = false;
                         }
                     }
 
@@ -26,6 +26,9 @@ window.angular && (function (angular) {
                            $scope.selectedSeverity.medium && 
                            $scope.selectedSeverity.high){
                             $scope.selectedSeverity.all = true;
+                            $scope.selectedSeverity.low = false;
+                            $scope.selectedSeverity.medium = false;
+                            $scope.selectedSeverity.high = false;
                         }else{
                             $scope.selectedSeverity.all = false;
                         }

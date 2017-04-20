@@ -26,9 +26,9 @@ window.angular && (function (angular) {
                 // priority buttons
                 $scope.selectedSeverity = {
                     all: true,
-                    low: true,
-                    medium: true,
-                    high: true
+                    low: false,
+                    medium: false,
+                    high: false
                 };
                 $scope.selectedStatus = {
                     all: true,
@@ -52,11 +52,14 @@ window.angular && (function (angular) {
                 };
 
                 $scope.filterBySeverity = function(log){
+                    if($scope.selectedSeverity.all) return true;
+
                     return( (log.severity_flags.low && $scope.selectedSeverity.low) ||
                             (log.severity_flags.medium && $scope.selectedSeverity.medium) ||
                             (log.severity_flags.high && $scope.selectedSeverity.high)
                     );
                 }
+
 
                 $scope.filterByStatus = function(log){
                     if ($scope.selectedStatus.all) return true;
