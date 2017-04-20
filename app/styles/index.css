@@ -3968,8 +3968,6 @@ section.row {
       max-height: 1000px;
       transition: all .5s ease; }
   #inventory__details .inv-event-log-row {
-    position: relative;
-    z-index: 100;
     border-top: 2px solid #ccc;
     margin-right: 3.7em;
     margin-left: 0;
