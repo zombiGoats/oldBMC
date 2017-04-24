@@ -2388,6 +2388,118 @@ input.toggle-switch__round-flat:checked + label:after {
     width: 100%;
     border-left-width: 1px; } }
 
+.tag {
+  font-size: .9em;
+  padding: .4em .8em .2em;
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  padding-right: 60px;
+  border-radius: 3px;
+  line-height: 1.5;
+  overflow: hidden;
+  margin: .4em .3em;
+  min-width: 185px;
+  text-align: left; }
+  .tag:hover {
+    cursor: pointer; }
+  .tag:before {
+    content: '+';
+    font-size: 2em;
+    font-weight: 400;
+    transform: rotate(45deg);
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -18px;
+    color: #666;
+    height: 20px;
+    width: 20px; }
+  .tag:after {
+    content: '';
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    border-left: 1px solid #ffffff; }
+
+.tag.custom {
+  background: #bdcce4; }
+
+.event__resolved {
+  background: #e2ddf5; }
+
+.event__unresolved {
+  background: #e2ddf5; }
+
+.event__high {
+  background: #f6adae; }
+
+.event__medium {
+  background: #ffcc99; }
+
+.event__low {
+  background: #cad7fb; }
+
+.priority-tag {
+  color: #ffffff;
+  font-size: .8em;
+  text-transform: uppercase;
+  padding: 2px 2em;
+  font-weight: 700;
+  line-height: inherit;
+  min-width: 103px;
+  text-align: center; }
+  .priority-tag.high-priority {
+    background: #e62425; }
+  .priority-tag.med-priority {
+    background: #ff7f00; }
+  .priority-tag.low-priority {
+    background: #3c6df0; }
+  .priority-tag.event-resolved {
+    background: #5A3EC8;
+    padding: 2px 1em; }
+
+.priority-tag-circ {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgba(0, 186, 161, 0.4);
+  position: relative;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #00baa1; }
+  .priority-tag-circ.high-priority {
+    color: #e62325;
+    background-color: rgba(230, 35, 37, 0.4);
+    background-image: url(/assets/images/crit-x.svg);
+    border-color: #e62325; }
+    .priority-tag-circ.high-priority:before {
+      content: '';
+      position: absolute;
+      top: -11px;
+      left: -3px;
+      font-weight: 600;
+      font-size: 1.5em;
+      -webkit-font-smoothing: antialiased;
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004); }
+  .priority-tag-circ.medium-priority {
+    background: rgba(220, 38, 127, 0.5);
+    border-color: #dc267f; }
+  .priority-tag-circ.warn-priority {
+    border-color: #ff836f;
+    background-image: url(/assets/images/warn-slash.svg);
+    background-color: rgba(255, 128, 108, 0.3); }
+  .priority-tag-circ.normal-priority {
+    background: rgba(0, 186, 161, 0.4); }
+  .priority-tag-circ.disabled {
+    background: rgba(102, 102, 102, 0.2);
+    border-color: rgba(102, 102, 102, 0.2); }
+  .priority-tag-circ.event-resolved {
+    background: #5A3EC8;
+    padding: 2px 1em; }
+
 .threshold-chart__wrapper {
   position: relative; }
   .threshold-chart__wrapper .threshold__label {
