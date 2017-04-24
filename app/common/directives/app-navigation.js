@@ -16,7 +16,7 @@ window.angular && (function (angular) {
                         $scope.firstLevel = firstLevel;
                         //$location.path('/'+firstLevel);
                     };
-                    $scope.closeParent = function(){
+                    $scope.closeSubnav = function(){
                         $scope.firstLevel = '';
                     };
                     $scope.$watch('showNavigation', function(){
