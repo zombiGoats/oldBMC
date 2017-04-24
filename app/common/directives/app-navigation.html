@@ -32,19 +32,19 @@
                 <span>Users</span></button>
         </li>
     </ul>
-    <ul class="nav__second-level btn-overview" ng-style="navStyle" ng-class="{opened: firstLevel == 'overview'}">
-        <li ng-class="{'active': (path == '/overview' || path == '/overview/system')}" tabindex="2"><a href="#/overview/system">System Overview</a></li>
+    <ul class="nav__second-level btn-overview" ng-style="navStyle"  ng-class="{opened: firstLevel == 'overview'}">
+        <li ng-class="{'active': (path == '/overview' || path == '/overview/system')}" tabindex="2"><a href="#/overview/system" ng-click="closeParent()">System Overview</a></li>
     </ul>
-    <ul class="nav__second-level btn-health" ng-style="navStyle"  ng-class="{opened: firstLevel == 'server-health'}">
-        <li ng-class="{'active': (path == '/server-health' || path == '/server-health/event-log')}"><a href="#/server-health/event-log" tabindex="7">Event Log</a></li>
-        <li ng-class="{'active': (path == '/server-health/inventory-overview' || path == '/server-health/inventory')}"><a href="#/server-health/inventory-overview">Hardware Inventory</a></li>
-        <li ng-class="{'active': (path == '/server-health/sensors-overview' || path == '/server-health/sensors')}"><a href="#/server-health/sensors-overview">Sensor Data</a></li>
-        <li ng-class="{'active': (path == '/server-health/power-consumption')}"><a href="#/server-health/power-consumption" tabindex="4">Power consumption</a></li>
-        <li ng-class="{'active': (path == '/server-health/unit-id')}"><a href="#/server-health/unit-id" tabindex="6">Unit ID</a></li>
-        <li ng-class="{'active': (path == '/server-health/diagnostics')}"><a href="#/server-health/diagnostics">Diagnostics</a></li>
+    <ul class="nav__second-level btn-health" ng-style="navStyle" ng-class="{opened: firstLevel == 'server-health'}">
+        <li><a href="#/server-health/event-log" tabindex="7" ng-click="closeParent()">Event Log</a></li>
+        <li ng-class="{'active': (path == '/server-health/inventory-overview' || path == '/server-health/inventory')}" ng-click="closeParent()"><a href="#/server-health/inventory-overview">Hardware Inventory</a></li>
+        <li ng-class="{'active': (path == '/server-health/sensors-overview' || path == '/server-health/sensors')}"><a href="#/server-health/sensors-overview" ng-click="closeParent()">Sensor Data</a></li>
+        <li ng-class="{'active': (path == '/server-health/power-consumption')}"><a href="#/server-health/power-consumption" tabindex="4" ng-click="closeParent()">Power consumption</a></li>
+        <li ng-class="{'active': (path == '/server-health/unit-id')}"><a href="#/server-health/unit-id" tabindex="6" ng-click="closeParent()">Unit ID</a></li>
+        <li ng-class="{'active': (path == '/server-health/diagnostics')}"><a href="#/server-health/diagnostics" ng-click="closeParent()">Diagnostics</a></li>
     </ul>
     <ul class="nav__second-level btn-control" ng-style="navStyle"  ng-class="{opened: firstLevel == 'server-control'}">
-        <li ng-class="{'active': (path == '/server-control' || path == '/server-control/power-operations')}" tabindex="3"><a href="#/server-control/power-operations">Server power operations</a></li>
+        <li ng-class="{'active': (path == '/server-control' || path == '/server-control/power-operations')}" tabindex="3"><a href="#/server-control/power-operations" ng-click="closeParent()">Server power operations</a></li>
         <li ng-class="{'active': (path == '/server-control/bmc-reboot')}"><a href="#/server-control/bmc-reboot" tabindex="8">Reboot BMC</a></li>
         <li ng-class="{'active': (path == '/server-control/remote-console')}"><a href="#/server-control/remote-console" tabindex="5">Remote console</a></li>
     </ul>
