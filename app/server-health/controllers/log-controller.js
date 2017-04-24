@@ -60,7 +60,6 @@ window.angular && (function (angular) {
                     );
                 }
 
-
                 $scope.filterByStatus = function(log){
                     if ($scope.selectedStatus.all) return true;
                     return( (log.Resolved && $scope.selectedStatus.resolved)||
