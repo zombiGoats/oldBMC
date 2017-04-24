@@ -50,7 +50,7 @@ gulp.task('webapp:minifyvendorjs', function () {
         .src(options.bowerFolderPath + '/**/*.js')
         .pipe(uglify({
             preserveComments: 'false'
-        })) 
+        }))
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(function(file) {
             return file.base;
@@ -123,7 +123,7 @@ module.exports = function (callback) {
     return runSequence(
         'webapp:clean',
         'webapp:sasscompile',
-        'webapp:minifyvendorjs',
+        //'webapp:minifyvendorjs',
         [
             'webapp:copyjs',
             'webapp:copycss',
