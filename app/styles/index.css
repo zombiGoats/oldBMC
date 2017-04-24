@@ -2178,7 +2178,7 @@ input.toggle-switch__round-flat:checked + label:after {
     margin-right: 10px; }
     @media (min-width: 64em) {
       .header__actions-bar .event__actions {
-        margin-top: 0; } }
+        margin-top: -6px; } }
     @media (min-width: 85.375em) {
       .header__actions-bar .event__actions {
         margin-right: -20px; } }
@@ -2892,7 +2892,7 @@ header {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 120px; }
+  width: 125px; }
   #nav__top-level li {
     margin: 0; }
   #nav__top-level .button, #nav__top-level button, #nav__top-level a {
@@ -2951,7 +2951,7 @@ header {
   background: #e6e9ed;
   top: 0;
   bottom: 0;
-  left: -120px;
+  left: -125px;
   width: 240px;
   z-index: 97;
   padding: 0;
@@ -2959,7 +2959,7 @@ header {
   list-style-type: none;
   transition: all .5s ease; }
   .nav__second-level.opened {
-    left: 120px;
+    left: 125px;
     box-shadow: 7px 0 28px -10px #666;
     transition: all .5s ease; }
   .nav__second-level a {
@@ -3141,19 +3141,19 @@ header {
   padding: 1.4em 3em 0;
   margin-bottom: 3.750em;
   background-size: 200% 100%;
-  background-image: linear-gradient(to right, #bcefce 50%, #ccc 50%);
-  background-position: 100%;
+  background-image: linear-gradient(to right, #ccc 50%, #bcefce 50%);
+  background-position: 0;
   transition: background-position 2s ease;
   overflow: hidden; }
   #power-operations .power__indicator-bar p {
     padding: 0;
     margin: 0; }
   #power-operations .power__indicator-bar.power__state-on {
-    background-position: -200%; }
+    background-position: -100%; }
     #power-operations .power__indicator-bar.power__state-on .power__state span:before {
       color: #34bc6e; }
   #power-operations .power__indicator-bar.power__state-off {
-    background-position: -100%;
+    background-position: 0;
     color: #666; }
     #power-operations .power__indicator-bar.power__state-off .power__state span:before {
       color: #666; }

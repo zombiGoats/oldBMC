@@ -19,6 +19,9 @@ window.angular && (function (angular) {
             'dataService',
             function($scope, $window, APIUtils, dataService){
                 $scope.dataService = dataService;
+
+                // Force to top of page when viewing single group
+                $window.scrollTo(0, 0);
             }
         ]
     );
