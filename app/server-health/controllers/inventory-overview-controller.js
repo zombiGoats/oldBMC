@@ -2,8 +2,8 @@
  * Controller for server
  *
  * @module app/serverHealth
- * @exports fruInformationController
- * @name fruInformationController
+ * @exports inventoryOverviewController
+ * @name inventoryOverviewController
  * @version 0.1.0
  */
 
@@ -12,7 +12,7 @@ window.angular && (function (angular) {
 
     angular
         .module('app.serverHealth')
-        .controller('fruInformationController', [
+        .controller('inventoryOverviewController', [
             '$scope', 
             '$window', 
             'APIUtils', 
