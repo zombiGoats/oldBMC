@@ -2002,6 +2002,7 @@ input.toggle-switch__round-flat:checked + label:after {
   background-color: #3c6df0; }
 
 .toggle-filter {
+  margin-top: 12px;
   margin-right: 2em;
   margin-bottom: 1em; }
   .toggle-filter .filter-label {
@@ -2225,6 +2226,7 @@ input.toggle-switch__round-flat:checked + label:after {
   width: 100%;
   max-width: 99%;
   display: inline-block;
+  float: left;
   position: relative;
   margin-right: 1em;
   margin-top: .5em;
