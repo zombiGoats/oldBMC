@@ -3497,10 +3497,12 @@ header {
   font-weight: 700;
   border: 0; }
 
-@media (min-width: 100em) {
-  #event-log .content__search {
-    max-width: 61%;
-    transition: all .5s ease; } }
+#event-log .content__search {
+  float: none; }
+  @media (min-width: 100em) {
+    #event-log .content__search {
+      max-width: 61%;
+      transition: all .5s ease; } }
 
 #event-filter .filter-label {
   color: #b3b3b3;

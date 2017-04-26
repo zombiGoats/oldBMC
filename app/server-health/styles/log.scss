@@ -37,6 +37,7 @@
     border: 0;
   }
   .content__search {
+    float: none;
     @include mediaQuery(x-large) {
       max-width: 61%;
       @include fastTransition-all;
