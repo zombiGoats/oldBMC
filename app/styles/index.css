@@ -2525,7 +2525,7 @@ input.toggle-switch__round-flat:checked + label:after {
   position: relative;
   line-height: 0;
   padding: .8em 0 2em 0;
-  margin: 0 2.5em 1em 0; }
+  margin: 0 2.5em 1em 2.5em; }
   .threshold-chart .threshold__marker {
     position: absolute;
     top: 13px;
