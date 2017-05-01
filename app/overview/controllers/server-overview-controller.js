@@ -12,7 +12,7 @@ window.angular && (function (angular) {
 
     angular
         .module('app.overview')
-        .controller('systemOverviewController', [
+        .controller('serverOverviewController', [
             '$scope', 
             '$window', 
             'APIUtils', 

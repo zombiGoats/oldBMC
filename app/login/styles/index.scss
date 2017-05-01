@@ -3,6 +3,9 @@
     background: linear-gradient(to right, #FFFFFF 49.999%, #e6e9ed 50%);
     @include fastTransition-all;
   }
+  input {
+    height: 3.1em;
+  }
 }
 
 .login__wrapper {

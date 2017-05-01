@@ -27,7 +27,7 @@ textarea {
   transition: none !important;
   &:focus {
     border-color: $lightbg__accent;
-    border-bottom: 5px solid $lightbg__primary;
+    box-shadow: 0 -5px #3C6DEF inset;
   }
   &:disabled, .disabled {
     background: $field__disabled;
@@ -36,6 +36,12 @@ textarea {
   &.input__error {
     border-color: $error-color;
   }
+}
+
+input[readonly],
+input[readonly]:focus{
+  border: 0;
+  box-shadow: 0 0 0;
 }
 
 textarea { padding: .2em;
