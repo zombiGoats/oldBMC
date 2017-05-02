@@ -1,4 +1,4 @@
-$nav__toplvlWidth: 120px;
+$nav__toplvlWidth: 125px;
 $nav__seclvlWidth: 240px;
 
 // Top level navigation
@@ -30,6 +30,7 @@ $nav__seclvlWidth: 240px;
     margin-bottom: 0;
     white-space: normal;
     border-radius: 0;
+    text-decoration: none;
     .nav__icon {
       color: $white;
       max-height: 40px;
@@ -91,21 +92,13 @@ $nav__seclvlWidth: 240px;
   z-index: 97;
   padding: 0;
   margin: 0;
-  display: none;
   list-style-type: none;
   @include fastTransition-all;
-  @include mediaQuery(medium) {
-    left: $nav__toplvlWidth;
-    &.btn-overview {
-      display: block;
-    }
-  }
   &.opened {
     left: $nav__toplvlWidth;
-    display: block;
+    box-shadow: 7px 0 28px -10px $darkgrey;
     @include fastTransition-all;
   }
-
   a {
     padding: 1.2em 1em 1.2em 1em;
     display: block;

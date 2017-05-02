@@ -23,9 +23,14 @@ window.angular && (function (angular) {
                     'controller': 'logController',
                     authenticated: true
                 })
-                .when('/server-health/fru-information', {
-                    'templateUrl': 'server-health/controllers/fru-information-controller.html',
-                    'controller': 'fruInformationController',
+                .when('/server-health/inventory-overview', {
+                    'templateUrl': 'server-health/controllers/inventory-overview-controller.html',
+                    'controller': 'inventoryOverviewController',
+                    authenticated: true
+                })
+                .when('/server-health/inventory', {
+                    'templateUrl': 'server-health/controllers/inventory-controller.html',
+                    'controller': 'inventoryController',
                     authenticated: true
                 })
                 .when('/server-health/sensors-overview', {
@@ -33,7 +38,7 @@ window.angular && (function (angular) {
                     'controller': 'sensorsOverviewController',
                     authenticated: true
                 })
-                .when('/server-health/sensors/:type', {
+                .when('/server-health/sensors', {
                     'templateUrl': 'server-health/controllers/sensors-controller.html',
                     'controller': 'sensorsController',
                     authenticated: true
