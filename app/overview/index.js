@@ -19,13 +19,13 @@ window.angular && (function (angular) {
         .config(['$routeProvider', function ($routeProvider) {
             $routeProvider
                 .when('/overview/system', {
-                    'templateUrl': 'overview/controllers/server-overview-controller.html',
-                    'controller': 'serverOverviewController',
+                    'templateUrl': 'overview/controllers/system-overview-controller.html',
+                    'controller': 'systemOverviewController',
                     authenticated: true
                 })
                 .when('/overview', {
-                    'templateUrl': 'overview/controllers/server-overview-controller.html',
-                    'controller': 'serverOverviewController',
+                    'templateUrl': 'overview/controllers/system-overview-controller.html',
+                    'controller': 'systemOverviewController',
                     authenticated: true
                 });
         }]);

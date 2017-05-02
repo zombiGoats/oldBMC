@@ -2,8 +2,8 @@
  * Controller for server
  *
  * @module app/serverHealth
- * @exports inventoryController
- * @name inventoryOverviewController
+ * @exports fruInformationController
+ * @name fruInformationController
  * @version 0.1.0
  */
 
@@ -12,16 +12,13 @@ window.angular && (function (angular) {
 
     angular
         .module('app.serverHealth')
-        .controller('inventoryController', [
+        .controller('fruInformationController', [
             '$scope', 
             '$window', 
             'APIUtils', 
             'dataService',
             function($scope, $window, APIUtils, dataService){
                 $scope.dataService = dataService;
-
-                // Force to top of page when viewing single group
-                $window.scrollTo(0, 0);
             }
         ]
     );
