@@ -3,7 +3,7 @@
   position: relative;
   padding: .5em .8em;
   margin-top: -10px;
-  border: 1px solid $lightgrey;
+  border: 1px solid $medgrey;
   min-width: 70px;
   padding-right: 25px;
   font-weight: 400;
@@ -93,10 +93,9 @@
   position: relative;
   display: inline-block;
   margin-bottom: 15px;
-  padding-left: 1em;
   padding-top: 7px;
   cursor: pointer;
-  line-height: .5;
+  line-height: initial;
 }
 
 .control-check input {
@@ -177,7 +176,6 @@
 // Radio Buttons
 .control-radio {
   padding-left: 3em;
-  padding-top: .8em;
 }
 .control-radio.disabled:hover {
   cursor: default;
