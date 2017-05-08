@@ -1988,7 +1988,7 @@ input.toggle-switch__round-flat + label {
   padding: 2px;
   width: 50px;
   height: 30px;
-  background-color: #f5f7fa;
+  background-color: #d7dbe0;
   -webkit-border-radius: 60px;
   -moz-border-radius: 60px;
   border-radius: 60px;
@@ -2024,7 +2024,7 @@ input.toggle-switch__round-flat + label:after {
   left: 4px;
   bottom: 4px;
   width: 20px;
-  background-color: #f5f7fa;
+  background-color: #d7dbe0;
   -webkit-border-radius: 52px;
   -moz-border-radius: 52px;
   -ms-border-radius: 52px;
@@ -4082,7 +4082,41 @@ section.row {
   width: 100%;
   margin-top: 3em;
   padding-top: 1em;
-  border-top: 1px solid #f5f7fa; }
+  border-top: 1px solid #d7dbe0; }
   .net-config__form .network-config__submit-wrapper button {
     float: right;
     margin: .5em; }
+
+.user-manage__form label {
+  min-width: 260px;
+  font-weight: 700; }
+
+.user-manage__form input {
+  width: 190px;
+  height: 32px; }
+
+.user-manage__form fieldset {
+  display: block;
+  padding-left: 1.5em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #d7dbe0; }
+
+.user-manage__form .user-manage__input-wrapper {
+  position: relative;
+  height: 32px;
+  margin-bottom: 1em; }
+  .user-manage__form .user-manage__input-wrapper input {
+    padding-right: 60px; }
+
+.user-manage__form .password-toggle {
+  position: absolute;
+  right: 5px;
+  padding: 3px;
+  color: #3c6df0;
+  font-size: .8em;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.user-manage__form .user-manage__submit-wrapper button {
+  float: right;
+  margin-left: .5em; }

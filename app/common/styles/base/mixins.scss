@@ -76,6 +76,10 @@
   min-width: calc(100% * (1/2) - 5px);
 }
 
+@mixin vertCenter {
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 @mixin indeterminate-bar {
   background-image: repeating-linear-gradient(-45deg, rgba(251, 234, 174, 0.35), rgba(251, 234, 174, 0.35) 25px, rgba(244, 176, 0, 0.45) 25px, rgba(244, 176, 0, 0.45) 50px);
