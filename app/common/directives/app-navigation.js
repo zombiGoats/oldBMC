@@ -14,7 +14,7 @@ window.angular && (function (angular) {
                 'controller': ['$scope', '$location', 'dataService', function($scope, $location, dataService){
                     $scope.showSubMenu = false;
                     $scope.change = function(firstLevel){
-                        if(firstLevel != $scope.firstLevel){
+                        if(firstLevel != $scope.firstLevel) {
                             $scope.firstLevel = firstLevel;
                             $scope.showSubMenu = true;
                         }else{
