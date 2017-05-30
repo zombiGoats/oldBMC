@@ -75,3 +75,8 @@
 .transitionAll {
   transition: all .5s ease;
 }
+
+//Uploading
+.uploading {
+  @include indeterminate-bar;
+}
