@@ -44,7 +44,9 @@
         <div class="table__body">
             <div class="table__row">
                 <div class="table__cell firmware__primary">
-                    <span class="table__cell-label">Boot Priority:</span><input type="number" value="0" class="firmware__priority-input" />
+                    <span class="table__cell-label">Boot Priority:</span>
+                    <div class="icon icon__up-arrow" aria-hidden="true"><span class="accessible-text">firmware up in priority</span></div>
+                    <div class="icon icon__down-arrow" aria-hidden="true"><span class="accessible-text">firmware down in priority</span></div>
                 </div>
                 <div class="table__cell firmware__active">
                     <span class="table__cell-label">Image state:</span>Active
@@ -79,7 +81,9 @@
             <!-- new row -->
             <div class="table__row">
                 <div class="table__cell">
-                    <span class="table__cell-label">Boot Priority:</span><input title="boot-priority" type="number" value="1" class="firmware__priority-input" />
+                    <span class="table__cell-label">Boot Priority:</span>
+                    <div class="icon icon__up-arrow" aria-hidden="true"><span class="accessible-text">firmware up in priority</span></div>
+                    <div class="icon icon__down-arrow" aria-hidden="true"><span class="accessible-text">firmware down in priority</span></div>
                 </div>
                 <div class="table__cell firmware__active">
                     <span class="table__cell-label">Image state:</span>Active
@@ -98,7 +102,9 @@
             <!-- new row -->
             <div class="table__row">
                 <div class="table__cell">
-                    <span class="table__cell-label">Boot Priority:</span><input type="number" value="20" class="firmware__priority-input" />
+                    <span class="table__cell-label">Boot Priority:</span>
+                    <div class="icon icon__up-arrow" aria-hidden="true"><span class="accessible-text">firmware up in priority</span></div>
+                    <div class="icon icon__down-arrow" aria-hidden="true"><span class="accessible-text">firmware down in priority</span></div>
                 </div>
                 <div class="table__cell firmware__active">
                     <span class="table__cell-label">Image state:</span>Active
@@ -134,7 +140,7 @@
             <!-- new row -->
             <div class="table__row table__row-uploading">
                 <div class="table__cell">
-                    <span class="table__cell-label">Boot Priority:</span>
+                   &nbsp;
                 </div>
                 <div class="table__cell firmware__active">
                     <span class="table__cell-label">Image state:</span>New Image
@@ -179,7 +185,9 @@
             <!-- new row -->
             <div class="table__row">
                 <div class="table__cell">
-                    <span class="table__cell-label">Boot Priority:</span><input type="number" value="0" class="firmware__priority-input" />
+                    <span class="table__cell-label">Boot Priority:</span>
+                    <div class="icon icon__up-arrow" aria-hidden="true"><span class="accessible-text">firmware up in priority</span></div>
+                    <div class="icon icon__down-arrow" aria-hidden="true"><span class="accessible-text">firmware down in priority</span></div>
                 </div>
                 <div class="table__cell firmware__active">
                     <span class="table__cell-label">Image state:</span>Active
@@ -249,9 +257,10 @@
         </div>
     </div>
 </div>
-<div class="row" id="upload">
+<div class="row column">
     <div class="column small-12 page-header">
-        <h1 class="inline h3 bold">Upload firmware image</h1>
+        <h2 class="inline h3 bold">Upload firmware image</h2>
+        <p>Specify an image file located on your workstation or a TFTP server.  An image file may contain firmware images for the server, BMC, or other hardware devices.  Each image that you upload will be unpacked from the image file, and added to the appropriate list above.</p>
     </div>
     <form id="firmware__upload-form" role="form" class="firmware__upload-form">
         <div class=" column firmware__upload-station">
@@ -263,7 +272,8 @@
                 <span class="button btn-secondary inline">Choose a file</span>
                 <span class="inline firmware__upload-file-name">No file chosen</span>
             </label>
-            <input type="submit" value="upload firmware" class="inline btn btn-primary float-right"/>
+            <input type="submit" value="Upload firmware" class="inline btn btn-primary float-right"/>
+            <div class="inline uploading">Upload in progress...</div>
         </div>
         <div class=" column firmware__upload-tftp">
             <h3 class="h4 bold">Upload from TFTP server</h3>
@@ -280,9 +290,10 @@
                         <input name="tftp-file-name" id="tftp-file-name" type="text"/>
                     </div>
                     <div class="column small-12 large-4">
-                        <input type="submit" value="upload firmware" class="inline btn btn-primary float-right"/>
+                        <input type="submit" value="Upload firmware" class="inline btn btn-primary float-right uploading"/>
                     </div>
                 </div>
+                <div class="inline uploading">Upload in progress...</div>
             </fieldset>
         </div>
     </form>
@@ -300,7 +311,7 @@
             <p>The upload of the image file has failed.</p>
         </div>
         <div class="modal__button-wrapper">
-            <button class="inline btn-primary">OK</button>
+            <button class="inline btn-primary">Close</button>
         </div>
     </div>
 </section>
@@ -314,7 +325,7 @@
             <p>Activation of the image file has failed.</p>
         </div>
         <div class="modal__button-wrapper">
-            <button class="inline btn-primary">OK</button>
+            <button class="inline btn-primary">Close</button>
         </div>
     </div>
 </section>
@@ -329,7 +340,7 @@
                 again.</p>
         </div>
         <div class="modal__button-wrapper">
-            <button class="inline btn-primary">OK</button>
+            <button class="inline btn-primary">Close</button>
         </div>
     </div>
 </section>
@@ -349,8 +360,8 @@
                 to the previous image.</p>
         </div>
         <div class="modal__button-wrapper">
-            <button class="inline btn-secondary float-right">Cancel</button>
-            <button class="inline btn-primary float-right">Continue</button>
+            <button class="inline btn-secondary">Cancel</button>
+            <button class="inline btn-primary">Continue</button>
         </div>
     </div>
 </section>
@@ -371,8 +382,8 @@
         </div>
         <a href="#/server-control/power-operations" class="bold modal__link">Go to power operations page</a>
         <div class="modal__button-wrapper">
-            <button class="inline btn-secondary">Warm reboot</button>
-            <button class="inline btn-primary">OK</button>
+            <button class="inline btn-secondary">Cancel</button>
+            <button class="inline btn-primary">Warm reboot</button>
         </div>
     </div>
 </section>

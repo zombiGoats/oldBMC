@@ -1702,7 +1702,7 @@ button, .button, input[type="submit"], .submit {
   font-weight: 700;
   text-transform: none;
   border-radius: 3px;
-  padding: .5rem 2rem .5rem;
+  padding: .5rem 1rem .5rem;
   height: auto;
   border: 0;
   overflow: hidden; }
@@ -1904,15 +1904,16 @@ select {
   display: inline-block;
   width: 20px;
   height: 20px;
-  position: relative; }
+  position: relative;
+  speak: none; }
+  .icon:hover {
+    cursor: pointer; }
 
 .icon__more {
   fill: #3f71ec;
   stroke: #3f71ec;
   background: #ffffff;
   overflow: visible; }
-  .icon__more:hover {
-    cursor: pointer; }
 
 .icon__more-dropdown {
   background: #f5f7fa;
@@ -1961,6 +1962,26 @@ select {
   fill: #3f71ec;
   float: left; }
 
+.icon__up-arrow {
+  margin-right: 1em; }
+  .icon__up-arrow:before {
+    content: '\029C0';
+    position: absolute;
+    font-size: 3em;
+    left: 0;
+    top: -50%;
+    transform: rotate(90deg); }
+
+.icon__down-arrow {
+  margin-right: 1em; }
+  .icon__down-arrow:before {
+    content: '\029C0';
+    position: absolute;
+    font-size: 3em;
+    left: 0;
+    top: -50%;
+    transform: rotate(-90deg); }
+
 .inline {
   display: inline-block; }
 
@@ -1992,7 +2013,7 @@ select {
   justify-content: center;
   flex-direction: column;
   background: transparent;
-  border: 0px;
+  border: 0;
   margin: 0; }
   .close:hover {
     color: #d8e2fc;
@@ -2029,7 +2050,11 @@ select {
   -webkit-animation: progress 2s linear infinite;
   -moz-animation: progress 2s linear infinite;
   animation: progress 2s linear infinite;
-  background-size: 130% 100%; }
+  background-size: 130% 100%;
+  font-weight: 700;
+  padding: .2em 6em .2em 1em;
+  margin: .8em 0;
+  width: 100%; }
 
 @-webkit-keyframes progress {
   0% {
@@ -2054,6 +2079,12 @@ select {
     background-position: 0 0; }
   100% {
     background-position: -70px 0; } }
+
+.accessible-text {
+  height: 0;
+  width: 0;
+  position: absolute;
+  overflow: hidden; }
 
 .toggle-switch {
   position: absolute;
@@ -3231,7 +3262,8 @@ header {
   position: relative;
   border-bottom: 1px solid #b8c1c1;
   margin: 1.625em 0 1.2em 0;
-  padding-left: 0; }
+  padding-left: 0;
+  padding-right: 0; }
   .page-header .h4 {
     padding: 0;
     margin: 0 0 .5em 0;
@@ -4390,6 +4422,8 @@ section.row {
     margin-right: 1.7em;
     text-decoration: none;
     font-weight: 700; }
+  .firmware__table .table__cell .icon {
+    color: #3f71ec; }
   .firmware__table .table-header {
     font-weight: 700; }
   .firmware__table .table__row.disabled .firmware__action-link {
@@ -4397,15 +4431,6 @@ section.row {
     opacity: 1; }
     .firmware__table .table__row.disabled .firmware__action-link:hover {
       cursor: pointer; }
-
-input.firmware__priority-input {
-  max-width: 3.8em;
-  max-height: 2.7em;
-  text-align: right;
-  margin: 0;
-  display: inline-block;
-  font-family: "Courier New", Helvetica, arial, sans-serif;
-  font-weight: 700; }
 
 .firmware__active-version {
   color: #3f71ec;
@@ -4447,7 +4472,7 @@ input.firmware__priority-input {
   margin-top: 1.5em; }
 
 .firmware__upload-chooser {
-  width: 70%;
+  width: 100%;
   background: #f5f7fa;
   padding-left: 1em;
   padding-right: 1em; }
@@ -4484,15 +4509,18 @@ input.firmware__priority-input {
     background-position: 0 0; }
   100% {
     background-position: -70px 0; } }
+  @media (min-width: 64em) {
+    .firmware__upload-chooser {
+      width: 70%; } }
 
 .firmware__upload-station {
   padding-bottom: 1em;
   border-bottom: 1px solid #d7dbe0;
-  padding-left: 3em; }
+  padding-left: 1em; }
 
 .firmware__upload-tftp {
   padding-top: 2em;
-  padding-left: 3em; }
+  padding-left: 1em; }
 
 .user-manage__form label {
   min-width: 260px;

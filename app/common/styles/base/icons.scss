@@ -3,6 +3,10 @@
   width: 20px;
   height: 20px;
   position: relative;
+  speak: none;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .icon__more {
@@ -10,9 +14,6 @@
   stroke: $medblue;
   background: $white;
   overflow: visible;
-  &:hover {
-    cursor: pointer;
-  }
 }
 
 .icon__more-dropdown {
@@ -68,4 +69,27 @@
   height: 25px;
   fill: $medblue;
   float: left;
+}
+
+.icon__up-arrow {
+  margin-right: 1em;
+  &:before {
+    content: '\029C0';
+    position: absolute;
+    font-size: 3em;
+    left: 0;
+    top: -50%;
+    transform: rotate(90deg);
+  }
+}
+.icon__down-arrow {
+  margin-right: 1em;
+  &:before {
+    content: '\029C0';
+    position: absolute;
+    font-size: 3em;
+    left: 0;
+    top: -50%;
+    transform: rotate(-90deg);
+  }
 }

@@ -15,6 +15,9 @@
       text-decoration: none;
       font-weight: 700;
     }
+    .icon {
+      color: $medblue;
+    }
   }
 
   .table-header {
@@ -32,15 +35,6 @@
   }
 }
 
-input.firmware__priority-input {
-  max-width: 3.8em;
-  max-height: 2.7em;
-  text-align: right;
-  margin: 0;
-  display: inline-block;
-  font-family: "Courier New", Helvetica, arial, sans-serif;
-  font-weight: 700;
-}
 .firmware__active-version {
   color: $medblue;
   font-size: .8em;
@@ -93,7 +87,7 @@ input.firmware__priority-input {
   }
 }
 .firmware__upload-chooser {
-    width: 70%;
+    width: 100%;
     background: $lightgrey;
     padding-left: 1em;
     padding-right: 1em;
@@ -104,13 +98,16 @@ input.firmware__priority-input {
   &.uploading {
     @include indeterminate-bar;
   }
+  @include mediaQuery(medium) {
+    width: 70%;
+  }
 }
 .firmware__upload-station {
   padding-bottom: 1em;
   border-bottom: 1px solid $medgrey;
-  padding-left: 3em;
+  padding-left: 1em;
 }
 .firmware__upload-tftp {
   padding-top: 2em;
-  padding-left: 3em;
+  padding-left: 1em;
 }
