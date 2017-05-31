@@ -1,13 +1,3 @@
-
-.modal-examples {
-  position: absolute;
-  top:25%;
-  left:0;
-  width:100%;
-  z-index: 101;
-  display: none;
-}
-
 .modal-overlay {
   width:100%;
   height:100%;
@@ -30,12 +20,12 @@
   border: thin #000 solid;
   background-color:#fff;
   z-index:101;
-  //position:fixed;
+  position:fixed;
   top:25%;
   left:25%;
   overflow: hidden;
   @include fastTransition-all;
-  //display:none;
+  display:none;
   @include mediaQuery(medium) {
     padding: 2.5em;
   }
