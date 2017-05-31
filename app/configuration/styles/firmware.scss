@@ -17,6 +17,9 @@
     }
     .icon {
       color: $medblue;
+      &.disabled {
+        color: $medgrey;
+      }
     }
   }
 

@@ -1978,7 +1978,7 @@ select {
     content: '\029C0';
     position: absolute;
     font-size: 3em;
-    left: 0;
+    left: -4px;
     top: -50%;
     transform: rotate(-90deg); }
 
@@ -4418,6 +4418,8 @@ section.row {
     font-weight: 700; }
   .firmware__table .table__cell .icon {
     color: #3f71ec; }
+    .firmware__table .table__cell .icon.disabled {
+      color: #d7dbe0; }
   .firmware__table .table-header {
     font-weight: 700; }
   .firmware__table .table__row.disabled .firmware__action-link {
