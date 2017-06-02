@@ -45,7 +45,7 @@
             <div class="table__row">
                 <div class="table__cell firmware__primary">
                     <span class="table__cell-label">Boot Priority:</span>
-                    <div class="icon icon__up-arrow disabled" aria-hidden="true"><span class="accessible-text">firmware down in priority</span></div>
+                    <div class="icon icon__up-arrow icon-as-spacer" aria-hidden="true"><span class="accessible-text">firmware down in priority</span></div>
                     <div class="icon icon__down-arrow" aria-hidden="true"><span class="accessible-text">firmware down in priority</span></div>
                 </div>
                 <div class="table__cell firmware__active">
@@ -104,7 +104,7 @@
                 <div class="table__cell">
                     <span class="table__cell-label">Boot Priority:</span>
                     <div class="icon icon__up-arrow" aria-hidden="true"><span class="accessible-text">firmware up in priority</span></div>
-                    <div class="icon icon__down-arrow" aria-hidden="true"><span class="accessible-text">firmware down in priority</span></div>
+                    <div class="icon icon__down-arrow icon-as-spacer" aria-hidden="true"><span class="accessible-text">firmware down in priority</span></div>
                 </div>
                 <div class="table__cell firmware__active">
                     <span class="table__cell-label">Image state:</span>Active
@@ -137,21 +137,22 @@
                     <button class="firmware__action-link">Delete</button>
                 </div>
             </div>
-            <!-- new row -->
-            <div class="table__row table__row-uploading">
-                <div class="table__cell">
-                   &nbsp;
-                </div>
+            <div class="table__row">
+                <div class="table__row-save" role="alert"><p>Saved</p></div> <!-- inject div when row is saved -->
+                <div class="table__cell"></div>
                 <div class="table__cell firmware__active">
-                    <span class="table__cell-label">Image state:</span>New Image
+                    <span class="table__cell-label">Image state:</span>Invalid
                 </div>
                 <div class="table__cell">
-                    <span class="table__cell-label">Image ID:</span>
+                    <span class="table__cell-label">Image ID:</span>46c9c3e4
                 </div>
                 <div class="table__cell firmware__version">
-                    <span class="table__cell-label">Version:</span>Upload in progress
+                    <span class="table__cell-label">Version:</span>v1.99.4-82-g774g15r
                 </div>
-                <div class="table__cell"></div>
+                <div class="table__cell">
+                    <span class="table__cell-label">Action:</span>
+                    <button class="firmware__action-link">Delete</button>
+                </div>
             </div>
         </div>
     </div>
@@ -255,7 +256,7 @@
         </div>
     </div>
 </div>
-<div class="row column">
+<div class="row column" id="upload">
     <div class="column small-12 page-header">
         <h2 class="inline h3 bold">Upload firmware image</h2>
         <p>Specify an image file located on your workstation or a TFTP server.  An image file may contain firmware images for the server, BMC, or other hardware devices.  Each image that you upload will be unpacked from the image file, and added to the appropriate list above.</p>
@@ -288,7 +289,7 @@
                         <input name="tftp-file-name" id="tftp-file-name" type="text"/>
                     </div>
                     <div class="column small-12 large-4">
-                        <input type="submit" value="Upload firmware" class="inline btn btn-primary float-right uploading"/>
+                        <input type="submit" value="Download firmware" class="inline btn btn-primary float-right uploading"/>
                     </div>
                 </div>
                 <div class="inline uploading">Upload in progress...</div>
@@ -338,6 +339,21 @@
         </div>
         <div class="modal__button-wrapper">
             <button class="inline btn-primary">Close</button>
+        </div>
+    </div>
+</section>
+<section class="modal" aria-hidden="true" aria-labelledby="modalTitle" aria-describedby="modalDescription" role="dialog">
+    <div class="modal__tftp-unreachable" role="document">
+        <div class="screen-reader-offscreen modal-description">Delete firmware image</div><!-- accessibility only; used for screen readers -->
+        <div class="page-header ">
+            <h1 class="modal-title h4"><span class="icon icon__warning"></span>Delete image</h1>
+        </div>
+        <div class="modal__content">
+            <p>Delete firmware v3.4-82-g874g45r?</p>
+        </div>
+        <div class="modal__button-wrapper">
+            <button class="inline btn-secondary">Cancel</button>
+            <button class="inline btn-primary">Continue</button>
         </div>
     </div>
 </section>

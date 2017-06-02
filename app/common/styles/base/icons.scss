@@ -7,6 +7,9 @@
   &:hover {
     cursor: pointer;
   }
+  &.icon-as-spacer {
+    text-indent: -9999px;
+  }
 }
 
 .icon__more {

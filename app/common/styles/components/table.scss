@@ -24,10 +24,26 @@
   max-width: calc(100vw - 10px);
   flex-wrap: wrap;
   font-weight: 400;
+  position: relative;
   &.disabled {
     background-color: $disabled-row;
     color: $disabled-row-txt;
   }
+}
+
+.table__row-save {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+  background: $darkbg__primary;
+  z-index:200;
+  color: $white;
+  padding: .8em 1em;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 
 .table__cell {
@@ -88,3 +104,5 @@
   font-weight: 700;
   @include indeterminate-bar;
 }
+
+
