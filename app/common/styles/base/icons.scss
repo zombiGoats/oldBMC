@@ -84,6 +84,9 @@
     top: -50%;
     transform: rotate(90deg);
   }
+  &.hide {
+    text-align: -9999px;
+  }
 }
 .icon__down-arrow {
   margin-right: 1em;
