@@ -1927,7 +1927,7 @@ input[type='url'],
 input[type='text'],
 textarea {
   border-radius: 0px;
-  border: 1px solid #d7dbe0;
+  border: 1px solid #666;
   height: 3.1em;
   margin: 0 0 1em 0;
   background: #ffffff;
@@ -1941,7 +1941,7 @@ textarea {
   input[type='url']:focus,
   input[type='text']:focus,
   textarea:focus {
-    border-color: #d8e2fc;
+    border-color: #d7dbe0;
     box-shadow: 0 -5px #3C6DEF inset; }
   input[type='email']:disabled,
   input[type='email'] .disabled,
@@ -2045,12 +2045,13 @@ select {
 
 .icon__warning {
   margin-right: .7em;
-  margin-top: -2px; }
+  margin-top: -2px;
+  font-weight: 700; }
   .icon__warning:before {
     content: '!';
-    color: #e62325;
+    color: #ff7f00;
     position: absolute;
-    left: 55%;
+    left: 50%;
     top: 40%;
     font-size: .7em; }
   .icon__warning:after {
@@ -2183,7 +2184,7 @@ input.toggle-switch__round-flat:checked + label:after {
     font-size: .75em;
     margin-bottom: 3px; }
   .toggle-filter button {
-    margin: 3px -3px;
+    margin: 3px -4px;
     padding: .6em 2em;
     min-height: 2.1em;
     font-size: .9em;
@@ -2191,8 +2192,6 @@ input.toggle-switch__round-flat:checked + label:after {
     border-radius: 0; }
     .toggle-filter button.first, .toggle-filter button.last {
       border-radius: 3px; }
-    .toggle-filter button.last {
-      border-left: 0; }
   .toggle-filter .btn-primary {
     border: 2px solid #3c6df0; }
 
@@ -2776,10 +2775,11 @@ input.toggle-switch__round-flat:checked + label:after {
   border: thin #000 solid;
   background-color: #fff;
   z-index: 101;
-  position: static;
+  position: fixed;
   top: 25%;
   left: 25%;
   overflow: hidden;
+  display: none;
   transition: all .5s ease; }
   @media (min-width: 64em) {
     .modal {

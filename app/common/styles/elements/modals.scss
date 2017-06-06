@@ -20,12 +20,12 @@
   border: thin #000 solid;
   background-color:#fff;
   z-index:101;
-  position:static;
+  position:fixed;
   top:25%;
   left:25%;
   overflow: hidden;
+  display:none;
   @include fastTransition-all;
-  //display:none;
   @include mediaQuery(medium) {
     padding: 2.5em;
   }

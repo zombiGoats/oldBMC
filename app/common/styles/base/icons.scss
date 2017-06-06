@@ -47,11 +47,12 @@
 .icon__warning{
   margin-right: .7em;
   margin-top: -2px;
+  font-weight: 700;
   &:before {
     content: '!';
-    color: $alert__error;
+    color: $alert__warning;
     position: absolute;
-    left: 55%;
+    left: 50%;
     top: 40%;
     font-size: .7em;
   }

@@ -10,7 +10,7 @@
 					Server overview</span></a>
 		</li>
 		<li>
-			<button class="btn-health" ng-class="{opened: firstLevel == 'server-health'}" ng-click="change('server-health')" tabindex="9">
+			<button class="btn-health" ng-class="{opened: firstLevel == 'server-health'}" ng-click="change('server-health')" tabindex="2">
 				<span>
 					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve" class="nav-icon">
 						<polyline class="st0" points="32,12.9 32,16 8,16 8,8 27,8 "/>
@@ -29,7 +29,7 @@
 			</button>
 		</li>
 		<li>
-			<button class="btn-control" ng-class="{opened: firstLevel == 'server-control'}" ng-click="change('server-control')">
+			<button class="btn-control" ng-class="{opened: firstLevel == 'server-control'}" ng-click="change('server-control')" tabindex="3">
 				<span>
 					<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve" class="nav-icon">
 						<line class="st0" x1="8" y1="12" x2="32" y2="12"/>
@@ -44,7 +44,7 @@
 			</button>
 		</li>
 		<li>
-			<button class="btn-config" ng-class="{opened: firstLevel == 'configuration'}" ng-click="change('configuration')">
+			<button class="btn-config" ng-class="{opened: firstLevel == 'configuration'}" ng-click="change('configuration')" tabindex="4">
 			<span>
 				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						 viewBox="0 0 40 40" style="enable-background:new 0 0 40 40;" xml:space="preserve" class="nav-icon">
@@ -60,7 +60,7 @@
 				Configuration</span></button>
 		</li>
 		<li>
-			<button class="btn-users" ng-class="{opened: firstLevel == 'users'}" ng-click="change('users')">
+			<button class="btn-users" ng-class="{opened: firstLevel == 'users'}" ng-click="change('users')" tabindex="5">
 				<span>Users</span>
 			</button>
 		</li>
@@ -71,18 +71,18 @@
 	<!--</ul>-->
 	<ul class="nav__second-level btn-health" ng-style="navStyle" ng-class="{opened: (showSubMenu && firstLevel == 'server-health')}">
 		<li ng-class="{'active': (path == '/server-health/event-log')}">
-			<a href="#/server-health/event-log" tabindex="7" ng-click="closeSubnav()">Event log</a></li>
+			<a href="#/server-health/event-log" tabindex="3" ng-click="closeSubnav()">Event log</a></li>
 		<li ng-class="{'active': (path == '/server-health/inventory-overview' || path == '/server-health/inventory')}" ng-click="closeSubnav()">
-			<a href="#/server-health/inventory-overview">Hardware inventory</a></li>
+			<a href="#/server-health/inventory-overview" tabindex="4">Hardware inventory</a></li>
 		<li ng-class="{'active': (path == '/server-health/sensors-overview' || path == '/server-health/sensors')}">
-			<a href="#/server-health/sensors-overview" ng-click="closeSubnav()">Sensor data</a></li>
+			<a href="#/server-health/sensors-overview" ng-click="closeSubnav()" tabindex="5">Sensor data</a></li>
 		<!--<li ng-class="{'active': (path == '/server-health/power-consumption')}"><a href="#/server-health/power-consumption" tabindex="4" ng-click="closeSubnav()">Power consumption</a></li>-->
 		<li ng-class="{'active': (path == '/server-health/unit-id')}">
 			<a href="#/server-health/unit-id" tabindex="6" ng-click="closeSubnav()">Server indicator</a></li>
 		<!--<li ng-class="{'active': (path == '/server-health/diagnostics')}"><a href="#/server-health/diagnostics" ng-click="closeSubnav()">Diagnostics</a></li>-->
 	</ul>
 	<ul class="nav__second-level btn-control" ng-style="navStyle" ng-class="{opened: (showSubMenu && firstLevel == 'server-control')}">
-		<li ng-class="{'active': (path == '/server-control' || path == '/server-control/power-operations')}" tabindex="3">
+		<li ng-class="{'active': (path == '/server-control' || path == '/server-control/power-operations')}">
 			<a href="#/server-control/power-operations" ng-click="closeSubnav()">Server power operations</a></li>
 		<li ng-class="{'active': (path == '/server-control/bmc-reboot')}">
 			<a href="#/server-control/bmc-reboot" tabindex="8" ng-click="closeSubnav()">Reboot BMC</a></li>
@@ -94,9 +94,6 @@
 			<a href="#/configuration/network" ng-click="closeSubnav()">Network settings</a></li>
 		<li ng-class="{'active': (path == '/configuration' || path == '/configuration/firmware')}">
 			<a href="#/configuration/firmware" ng-click="closeSubnav()">Firmware</a></li>
-		<!--<li ng-class="{'active': (path == '/configuration/date-time')}"><a href="#/configuration/date-time" ng-click="closeSubnav()">Date & Time</a></li>-->
-		<!--<li ng-class="{'active': (path == '/configuration/security')}"><a href="#/configuration/security" ng-click="closeSubnav()">Security</a></li>-->
-		<!--<li ng-class="{'active': (path == '/configuration/file')}"><a href="#/configuration/file" ng-click="closeSubnav()">Configuration File</a></li>-->
 	</ul>
 	<ul class="nav__second-level btn-users" ng-style="navStyle" ng-class="{opened: (showSubMenu && firstLevel == 'users')}">
 		<li ng-class="{'active': (path == '/users' || path == '/users/manage-accounts')}">
