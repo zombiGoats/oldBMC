@@ -2011,8 +2011,6 @@ select {
   height: 20px;
   position: relative;
   speak: none; }
-  .icon:hover {
-    cursor: pointer; }
   .icon.icon-as-spacer {
     text-indent: -9999px; }
 
@@ -2021,6 +2019,8 @@ select {
   stroke: #3f71ec;
   background: #ffffff;
   overflow: visible; }
+  .icon__more:hover {
+    cursor: pointer; }
 
 .icon__more-dropdown {
   background: #f5f7fa;
@@ -2044,23 +2044,11 @@ select {
   top: -5px; }
 
 .icon__warning {
-  margin-right: .7em;
-  margin-top: -2px;
-  font-weight: 700; }
-  .icon__warning:before {
-    content: '!';
-    color: #ff7f00;
-    position: absolute;
-    left: 50%;
-    top: 40%;
-    font-size: .7em; }
-  .icon__warning:after {
-    content: '\025b3';
-    position: absolute;
-    left: 0;
-    top: -10%;
-    color: #e62325;
-    font-size: 1.5em; }
+  width: 30px;
+  height: 30px;
+  background-image: url(/assets/images/icon-warning.svg);
+  background-repeat: no-repeat;
+  vertical-align: middle; }
 
 .icon__info {
   margin-top: -4px;
@@ -2823,7 +2811,7 @@ input.toggle-switch__round-flat:checked + label:after {
   position: relative;
   padding: .5em .8em;
   margin-top: -10px;
-  border: 1px solid #d7dbe0;
+  border: 1px solid #666;
   min-width: 70px;
   padding-right: 25px;
   font-weight: 400; }
