@@ -1921,7 +1921,7 @@ input[type='url'],
 input[type='text'],
 textarea {
   border-radius: 0px;
-  border: 1px solid #666;
+  border: 1px solid #505050;
   height: 3.1em;
   margin: 0 0 1em 0;
   background: #ffffff;
@@ -1974,6 +1974,9 @@ textarea {
     input[type='text'].input__error:focus,
     textarea.input__error:focus {
       box-shadow: 0 -5px #3C6DEF inset; }
+
+[type=color], [type=date], [type=datetime-local], [type=datetime], [type=email], [type=month], [type=number], [type=password], [type=search], [type=tel], [type=text], [type=time], [type=url], [type=week], textarea {
+  border-color: #505050; }
 
 input[readonly],
 input[readonly]:focus {
@@ -2378,7 +2381,7 @@ input.toggle-switch__round-flat:checked + label:after {
   margin-bottom: .5em; }
   .content__search #content__search-input {
     margin: 0;
-    border: 1px solid #d7dbe0;
+    border: 1px solid #505050;
     padding-left: 40px;
     padding-right: 5px; }
     .content__search #content__search-input:focus {
