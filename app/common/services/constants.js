@@ -20,7 +20,7 @@ window.angular && (function (angular) {
                     password: "testpass",
                 },
                 API_CREDENTIALS: {
-                    host: 'https://9.3.185.156',
+                    host: 'https://9.3.185.173',
                     mock_host: 'http://localhost:3000'
                 },
                 API_RESPONSE: {
