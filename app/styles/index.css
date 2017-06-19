@@ -1801,7 +1801,7 @@ h5, .h5 {
   position: absolute;
   overflow: hidden; }
 
-button, .button, input[type="submit"], .submit {
+button, .btn, .button, .submit {
   font-size: 1em;
   font-family: Helvetica, Arial, Verdana, sans-serif;
   font-weight: 700;
@@ -1811,7 +1811,7 @@ button, .button, input[type="submit"], .submit {
   height: auto;
   border: 0;
   overflow: hidden; }
-  button:hover, .button:hover, input[type="submit"]:hover, .submit:hover {
+  button:hover, .btn:hover, .button:hover, .submit:hover {
     cursor: pointer; }
 
 .disabled button, .disabled .button, .disabled input[type="submit"] {
@@ -1821,32 +1821,26 @@ button, .button, input[type="submit"], .submit {
     cursor: default;
     background: transparent; }
 
-.btn-primary,
-input[type="submit"] {
+.btn-primary {
   color: #ffffff;
   background: #3c6df0;
   min-height: 40px; }
-  .btn-primary:hover,
-  input[type="submit"]:hover {
+  .btn-primary:hover {
     background: #6289f3;
     transition: all .5s ease; }
-  .btn-primary.disabled,
-  input[type="submit"].disabled {
+  .btn-primary.disabled {
     background: #d8d8d8;
     color: #a6a5a6;
     transition: all .5s ease; }
-    .btn-primary.disabled:hover,
-    input[type="submit"].disabled:hover {
+    .btn-primary.disabled:hover {
       cursor: default; }
-  .btn-primary i,
-  input[type="submit"] i {
+  .btn-primary i {
     font-style: normal;
     text-transform: none;
     font-size: 1.5em;
     transform: rotate(80deg);
     display: inline-block; }
-  .btn-primary img,
-  input[type="submit"] img {
+  .btn-primary img {
     width: 18px;
     height: 18px;
     display: inline-block; }
