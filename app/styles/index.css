@@ -2944,12 +2944,13 @@ input.toggle-switch__round-flat:checked + label:after {
   width: 20px;
   height: 20px;
   background: #ffffff;
-  border: 1px solid #d7dbe0; }
+  border: 1px solid #b8c1c1; }
 
 /* Hover and focus states */
 .control-check:hover input ~ .control__indicator,
 .control-check input:focus ~ .control__indicator {
-  border: 1px solid #3c6df0; }
+  border: 1px solid #3c6df0;
+  background-color: #3c6df0; }
 
 /* Checked state */
 .control-check input:checked ~ .control__indicator {
@@ -4024,23 +4025,6 @@ section.row {
   @media (min-width: 64em) {
     #inventory__details .event__description {
       padding-left: 1.6em; } }
-
-#event-log .accord-trigger {
-  transform: rotate(90deg);
-  font-size: 1.5em;
-  color: gray;
-  padding: .3em;
-  display: block;
-  margin: 0 auto;
-  transition: all .2s ease; }
-  #event-log .accord-trigger:after {
-    content: '\276F'; }
-  #event-log .accord-trigger.active {
-    transform: rotate(-90deg);
-    color: #79a6f6; }
-  #event-log .accord-trigger:focus {
-    outline: 0;
-    color: #79a6f6; }
 
 #event-log .dropdown__date.row {
   padding: .5em; }
