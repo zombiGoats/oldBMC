@@ -3529,6 +3529,10 @@ section.row {
     #login__form {
       padding: 0 0 0 5em;
       max-width: 100%; } }
+  #login__form input:disabled,
+  #login__form input:disabled:hover {
+    background-color: #b8c1c1;
+    cursor: default; }
 
 .login__desc {
   text-align: left; }
@@ -4192,7 +4196,8 @@ section.row {
     border: 1px solid #d7dbe0;
     padding: 1em 1em 1em .7em;
     margin: .5em 0 .5em 0;
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
   #event-log__events .event-log__event-info:hover,
   .event-log__events .event-log__event-info:hover {
     cursor: pointer; }

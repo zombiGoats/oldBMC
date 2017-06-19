@@ -189,6 +189,7 @@
     padding: 1em 1em 1em .7em;
     margin: .5em 0 .5em 0;
     position: relative;
+    overflow: hidden;
   }
   .event-log__event-info {
     &:hover {
