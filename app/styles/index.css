@@ -4238,37 +4238,9 @@ section.row {
   margin: .5em 0;
   background: #ffffff;
   text-decoration: none;
-  border: 1px solid #d7dbe0; }
-  @media (min-width: 64em) {
-    .sensor__readings-row {
-      padding: .3em 1em .3em 1.5em; } }
-  .sensor__readings-row .sensor__title {
-    font-weight: 700;
-    background: #d7dbe0;
-    min-width: 100%;
-    padding: .5em; }
-    @media (min-width: 64em) {
-      .sensor__readings-row .sensor__title {
-        min-width: 30%;
-        background: transparent; } }
-  .sensor__readings-row .sensor__reading {
-    font-family: "Courier New", Helvetica, arial, sans-serif;
-    font-weight: 700;
-    display: block;
-    padding: .5em; }
-    @media (min-width: 64em) {
-      .sensor__readings-row .sensor__reading {
-        display: inline-block;
-        padding: 0; } }
-  .sensor__readings-row .sensor__current {
-    background: #f5f7fa;
-    margin: 0; }
-    @media (min-width: 64em) {
-      .sensor__readings-row .sensor__current {
-        padding: .7em 1em;
-        margin-left: 10px;
-        margin-right: 10px; } }
-  .sensor__readings-row:hover {
+  border: 1px solid #f5f7fa;
+  font-weight: 700; }
+  #sensors-overview .sensor__group:hover {
     background: #f1f2f6;
     color: #333; }
 
