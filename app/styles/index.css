@@ -2190,7 +2190,8 @@ input.toggle-switch__round-flat:checked + label:after {
     min-height: 2.1em;
     font-size: .9em;
     font-weight: 700;
-    border-radius: 0; }
+    border-radius: 0;
+    border-left: 0; }
     .toggle-filter button.first, .toggle-filter button.last {
       border-radius: 3px; }
   .toggle-filter .btn-primary {
