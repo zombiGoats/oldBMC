@@ -2191,7 +2191,8 @@ input.toggle-switch__round-flat:checked + label:after {
     font-size: .9em;
     font-weight: 700;
     border-radius: 0;
-    display: inline-block; }
+    border-left: 0; }
+    
     .toggle-filter button.first, .toggle-filter button.last {
       border-radius: 3px; }
   .toggle-filter .btn-primary {
