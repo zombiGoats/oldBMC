@@ -2197,7 +2197,8 @@ input.toggle-switch__round-flat:checked + label:after {
     font-weight: 700;
     border-radius: 0;
     display: inline-block;
-    border-left: 0; }
+    border-left: 0;
+  }
     .toggle-filter button.first, .toggle-filter button.last {
       border-radius: 3px; }
   .toggle-filter .btn-primary {
@@ -4169,8 +4170,7 @@ section.row {
       margin-right: 10px; } }
 
 .sensor__label {
-  float: left;
-  font-weight: 300; }
+  float: left; }
   @media (min-width: 64em) {
     .sensor__label {
       display: none; } }
@@ -4188,73 +4188,47 @@ section.row {
     .sensor__reading {
       display: inline-block;
       width: auto;
-      min-width: calc(70% * (1 / 5) - 10px); } }
-
+      min-width: calc(70% * (1 / 5) - 10px); }
+  }
 .sensor__readings-row {
   position: relative;
   display: block;
   margin: 0;
   background: #ffffff;
   text-decoration: none;
-  border: 1px solid #d7dbe0;
-  background: #f8fafc;
-  margin-top: 1em; }
+  border: 1px solid #d7dbe0; }
   @media (min-width: 64em) {
     .sensor__readings-row {
-      padding: .3em 1em .3em 1.5em;
-      margin-top: 0;
-      border-top: 0;
-      background: transparent; } }
-  .sensor__readings-row .icon {
-    margin: -8px 0 -8px -8px; }
+      padding: .3em 1em .3em 1.5em; } }
   .sensor__readings-row .sensor__title {
     font-weight: 700;
-    background: #e4e9f2;
+    background: #d7dbe0;
     min-width: 100%;
-    padding: .8em; }
+    padding: .5em; }
     @media (min-width: 64em) {
       .sensor__readings-row .sensor__title {
         min-width: 30%;
-        background: transparent;
-        padding: .5em .5em .5em 0; } }
-  .sensor__readings-row .content-label {
-    font-size: 1em;
-    margin-left: .8em;
-    color: gray; }
+        background: transparent; } }
   .sensor__readings-row .sensor__reading {
     font-family: "Courier New", Helvetica, arial, sans-serif;
     font-weight: 700;
     display: block;
-    padding: .3em .8em; }
+    padding: .5em; }
     @media (min-width: 64em) {
       .sensor__readings-row .sensor__reading {
         display: inline-block;
         padding: 0; } }
   .sensor__readings-row .sensor__current {
-    background: #ebeff5;
+    background: #f5f7fa;
     margin: 0; }
     @media (min-width: 64em) {
       .sensor__readings-row .sensor__current {
-        background: #f5f7fa;
         padding: .7em 1em;
         margin-left: 10px;
         margin-right: 10px; } }
-    .sensor__readings-row .sensor__current .sensor__label {
-      font-weight: 700; }
-      @media (min-width: 64em) {
-        .sensor__readings-row .sensor__current .sensor__label {
-          font-weight: 300; } }
-  .sensor__readings-row .sensor__critical {
-    background: #e62425;
-    color: #ffffff; }
-    .sensor__readings-row .sensor__critical .content-label {
-      color: #ffffff; }
-  .sensor__readings-row .sensor__warn {
-    background: #ffb001;
+  .sensor__readings-row:hover {
+    background: #f1f2f6;
     color: #333; }
-    .sensor__readings-row .sensor__warn .content-label {
-      color: #333; }
-
 #sensors .content__search, #sensors-overview .content__search {
   max-width: 100%; }
   @media (min-width: 1300px) {
