@@ -4170,7 +4170,8 @@ section.row {
       margin-right: 10px; } }
 
 .sensor__label {
-  float: left; }
+  float: left;
+  font-weight: 300; }
   @media (min-width: 64em) {
     .sensor__label {
       display: none; } }
@@ -4196,39 +4197,63 @@ section.row {
   margin: 0;
   background: #ffffff;
   text-decoration: none;
-  border: 1px solid #d7dbe0; }
+  border: 1px solid #d7dbe0;
+  background: #f8fafc;
+  margin-top: 1em; }
   @media (min-width: 64em) {
     .sensor__readings-row {
-      padding: .3em 1em .3em 1.5em; } }
+      padding: .3em 1em .3em 1.5em;
+      margin-top: 0;
+      border-top: 0;
+      background: transparent; } }
+  .sensor__readings-row .icon {
+    margin: -8px 0 -8px -8px; }
   .sensor__readings-row .sensor__title {
     font-weight: 700;
-    background: #d7dbe0;
+    background: #e4e9f2;
     min-width: 100%;
-    padding: .5em; }
+    padding: .8em; }
     @media (min-width: 64em) {
       .sensor__readings-row .sensor__title {
         min-width: 30%;
-        background: transparent; } }
+        background: transparent;
+        padding: .5em .5em .5em 0; } }
+  .sensor__readings-row .content-label {
+    font-size: 1em;
+    margin-left: .8em; }
   .sensor__readings-row .sensor__reading {
     font-family: "Courier New", Helvetica, arial, sans-serif;
     font-weight: 700;
     display: block;
-    padding: .5em; }
+    padding: .3em .8em; }
     @media (min-width: 64em) {
       .sensor__readings-row .sensor__reading {
         display: inline-block;
         padding: 0; } }
   .sensor__readings-row .sensor__current {
-    background: #f5f7fa;
+    background: #ebeff5;
     margin: 0; }
     @media (min-width: 64em) {
       .sensor__readings-row .sensor__current {
+        background: #f5f7fa;
         padding: .7em 1em;
         margin-left: 10px;
         margin-right: 10px; } }
-  .sensor__readings-row:hover {
-    background: #f1f2f6;
+    .sensor__readings-row .sensor__current .sensor__label {
+      font-weight: 700; }
+      @media (min-width: 64em) {
+        .sensor__readings-row .sensor__current .sensor__label {
+          font-weight: 300; } }
+  .sensor__readings-row .sensor__critical {
+    background: #e62425;
+    color: #ffffff; }
+    .sensor__readings-row .sensor__critical .content-label {
+      color: #ffffff; }
+  .sensor__readings-row .sensor__warn {
+    background: #ffb001;
     color: #333; }
+    .sensor__readings-row .sensor__warn .content-label {
+      color: #333; }
 #sensors .content__search, #sensors-overview .content__search {
   max-width: 100%; }
   @media (min-width: 1300px) {
