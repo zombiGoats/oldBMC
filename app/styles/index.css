@@ -2735,10 +2735,10 @@ input.toggle-switch__round-flat:checked + label:after {
   font-size: .9em;
   font-weight: 700;
   position: relative;
-  padding: 0 0 0 2em;
+  padding: 0 0 1em 2em;
   margin-right: .6em;
   text-decoration: none;
-  margin-top: 0; }
+  margin-top: 7px; }
   .btn-export:hover {
     text-decoration: underline; }
 
@@ -4198,88 +4198,185 @@ section.row {
     margin-top: -3px;
     display: inline-block; }
 
-.header__actions-bar {
-  padding-left: 1.5em;
+.sensor__heading {
   font-weight: 700; }
-  .header__actions-bar .sensor__heading-current {
-    padding-right: 1em; }
+  .sensor__heading.middle, .sensor__heading.right {
+    display: none; }
+    @media (min-width: 950px) {
+      .sensor__heading.middle, .sensor__heading.right {
+        display: inline-block; } }
 
-.sensor__heading-current {
-  margin: 0; }
-  @media (min-width: 64em) {
-    .sensor__heading-current {
-      margin-left: 10px;
-      margin-right: 10px; } }
+.sensor__critical-label {
+  color: #e62425;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .8em; }
 
-.sensor__label {
-  float: left; }
-  @media (min-width: 64em) {
-    .sensor__label {
-      display: none; } }
+.sensor__warning-label {
+  color: #ff806c;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: .8em; }
 
-.sensor__title {
-  min-width: 30%;
-  margin-bottom: 0; }
-
-.sensor__reading {
-  width: 100%;
-  text-align: right;
-  margin-bottom: 0;
-  display: none; }
-  @media (min-width: 64em) {
-    .sensor__reading {
-      display: inline-block;
-      width: auto;
-      min-width: calc(70% * (1 / 5) - 10px); } }
-
-.sensor__readings-row {
+#sensors-overview .sensor__group {
   position: relative;
   display: block;
   margin: .5em 0;
   background: #ffffff;
+  padding: 1.5em 6em 1.5em 3.7em;
   text-decoration: none;
-  border: 1px solid #d7dbe0; }
-  @media (min-width: 64em) {
-    .sensor__readings-row {
-      padding: .3em 1em .3em 1.5em; } }
-  .sensor__readings-row .sensor__title {
-    font-weight: 700;
-    background: #d7dbe0;
-    min-width: 100%;
-    padding: .5em; }
-    @media (min-width: 64em) {
-      .sensor__readings-row .sensor__title {
-        min-width: 30%;
-        background: transparent; } }
-  .sensor__readings-row .sensor__reading {
-    font-family: "Courier New", Helvetica, arial, sans-serif;
-    font-weight: 700;
-    display: block;
-    padding: .5em; }
-    @media (min-width: 64em) {
-      .sensor__readings-row .sensor__reading {
-        display: inline-block;
-        padding: 0; } }
-  .sensor__readings-row .sensor__current {
-    background: #f5f7fa;
-    margin: 0; }
-    @media (min-width: 64em) {
-      .sensor__readings-row .sensor__current {
-        padding: .7em 1em;
-        margin-left: 10px;
-        margin-right: 10px; } }
-  .sensor__readings-row:hover {
+  border: 1px solid #f5f7fa;
+  font-weight: 700; }
+  #sensors-overview .sensor__group:hover {
     background: #f1f2f6;
     color: #333; }
+
+#sensors-overview .priority-tag-circ {
+  position: absolute;
+  top: 50%;
+  left: 1.2em;
+  transform: translateY(-50%); }
+
+#sensors-overview .header__actions-bar {
+  padding-left: 3.5em;
+  padding-right: 7.3em; }
+
+#sensors .accord-row, #sensors-overview .accord-row {
+  padding-left: 3.7em;
+  padding-right: 1em; }
 
 #sensors .content__search, #sensors-overview .content__search {
   max-width: 100%; }
   @media (min-width: 1300px) {
     #sensors .content__search, #sensors-overview .content__search {
-      max-width: 70%; } }
+      max-width: 50%; } }
 
 #sensors .toggle-filter, #sensors-overview .toggle-filter {
+  display: inline-block;
   margin-right: 0; }
+
+#back-link {
+  margin: 1em 0 0; }
+  #back-link a {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding-left: 1.2em;
+    font-weight: 700; }
+    #back-link a:before {
+      content: '\221F';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-53%) rotate(45deg);
+      display: inline-block;
+      margin-right: 6px;
+      font-size: 1.1em;
+      font-weight: bold;
+      text-shadow: 0 0 1px black; }
+    #back-link a:hover {
+      text-decoration: underline; }
+
+#sensor__details {
+  display: block;
+  margin-top: .6em;
+  position: relative;
+  overflow: hidden; }
+  #sensor__details .header__actions-bar {
+    position: relative;
+    padding: 1em 35px 0 3.7em; }
+    #sensor__details .header__actions-bar .priority-tag-circ {
+      position: absolute;
+      left: 1.2em;
+      top: 50%;
+      transform: translateY(-50%); }
+      #sensor__details .header__actions-bar .priority-tag-circ.high-priority {
+        background-color: rgba(255, 92, 73, 0.3); }
+    #sensor__details .header__actions-bar .sensor__category {
+      margin: 0;
+      color: #ffffff;
+      min-width: 210px; }
+  #sensor__details .header-row {
+    background: #20214f; }
+  #sensor__details .btn-export {
+    text-transform: capitalize;
+    color: #333;
+    font-size: .9em;
+    font-weight: 700;
+    position: relative;
+    padding: 0 0 1em 2em; }
+    #sensor__details .btn-export:hover {
+      text-decoration: underline; }
+  #sensor__details .btn-export {
+    margin-top: 7px; }
+  #sensor__details .btn-export:before {
+    content: '\21E5';
+    position: absolute;
+    font-size: 1.7em;
+    vertical-align: middle;
+    transform: rotate(90deg);
+    display: inline-block;
+    left: 2px;
+    top: -5px; }
+  #sensor__details .sensor__info {
+    padding-top: 10px; }
+    #sensor__details .sensor__info:hover {
+      cursor: pointer; }
+  #sensor__details .accord-row .priority-tag-circ {
+    position: absolute;
+    top: 28px;
+    left: 1.2em; }
+  #sensor__details .sensor__title {
+    font-weight: 700;
+    font-size: 1.1em;
+    min-width: 210px;
+    max-width: 78%;
+    vertical-align: top; }
+  #sensor__details .sensors__description {
+    font-weight: 400; }
+  #sensor__details .sensor__reading {
+    font-family: "Courier New", Helvetica, arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #333;
+    max-width: 18%; }
+  #sensor__details .sensors__metadata-row {
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: 0.5s linear max-height;
+    transition: 0.5s linear max-height;
+    padding: 0;
+    transition: all .5s ease; }
+    @media (min-width: 85.375em) {
+      #sensor__details .sensors__metadata-row {
+        margin-left: 200px; } }
+    #sensor__details .sensors__metadata-row.active {
+      max-height: 1000px; }
+      @media (min-width: 47.938em) {
+        #sensor__details .sensors__metadata-row.active {
+          max-height: 1000px; } }
+      @media (min-width: 64em) {
+        #sensor__details .sensors__metadata-row.active {
+          max-height: 1000px; } }
+  #sensor__details .sensors__related {
+    width: 100%; }
+  #sensor__details .sensors__related-label {
+    font-weight: 700;
+    margin-right: 1.2em;
+    padding-top: .3em; }
+  #sensor__details .sensors__related-item {
+    margin-right: 1em;
+    padding-top: .3em;
+    display: inline-block;
+    float: left;
+    clear: both; }
+  #sensor__details .sensors__icon {
+    width: 20px;
+    height: 20px;
+    font-weight: normal;
+    margin-right: .5em;
+    margin-top: -3px;
+    display: inline-block; }
 
 #uid-switch .switch {
   margin-left: 1.7em; }
