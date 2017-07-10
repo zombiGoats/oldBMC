@@ -4374,10 +4374,6 @@ section.row {
 .firmware__upload-form label {
   font-weight: 700; }
 
-.firmware__upload-form .row p label,
-.firmware__upload-form fieldset label {
-  font-weight: 300; }
-
 .firmware__upload-form input {
   height: 2.4em; }
 
