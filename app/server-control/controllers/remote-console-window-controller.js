@@ -2,7 +2,7 @@
  * Controller for server
  *
  * @module app/serverControl
- * @exports remoteConsoleController
+ * @exports remoteConsoleWindowController
  * @name remoteConsoleController
  * @version 0.1.0
  */
@@ -12,13 +12,14 @@ window.angular && (function (angular) {
 
     angular
         .module('app.serverControl')
-        .controller('remoteConsoleController', [
+        .controller('remoteConsoleWindowController', [
             '$scope', 
             '$window', 
             'APIUtils', 
             'dataService',
             function($scope, $window, APIUtils, dataService){
                 $scope.dataService = dataService;
+                dataService.showNavigation = false;
 
                 // See https://github.com/macton/hterm for available hterm options
                 
@@ -52,9 +53,9 @@ window.angular && (function (angular) {
                 //Allows keyboard input
                 term.installKeyboard();
 
-                $scope.openTerminalWindow = function(){
-                    dataService.setRemoteWindowActive();
-                    $window.open('#/server-control/remote-console-window','Remote Console Window','directories=no,titlebar=no,toolbar=no,location=no,status=no,menubar=no,scrollbars=no,resizable=no,width=600,height=400');
+                $scope.close = function(){
+                    dataService.setRemoteWindowInactive();
+                    $window.close();
                 }
             }
         ]
