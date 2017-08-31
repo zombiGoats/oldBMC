@@ -36,7 +36,7 @@ window.angular && (function (angular) {
                 HOST_STATE_TEXT: {
                     on: 'Running',
                     off: 'Off',
-                    booting: 'Quiesced',
+                    booting: 'Standby',
                     unreachable: 'Unreachable'
                 },
                 HOST_STATE: {
