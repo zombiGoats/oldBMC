@@ -70,6 +70,7 @@ window.angular && (function (angular) {
                             }
                             expandedSelectedIdOnce = true;
                         }
+                        dataService.updateServerHealth(result.data);
                         $scope.logs = result.data;
                         $scope.originalData = result.original;
                         $scope.loading = false;
